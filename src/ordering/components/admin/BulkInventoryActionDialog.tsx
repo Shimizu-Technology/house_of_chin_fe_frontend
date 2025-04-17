@@ -667,7 +667,7 @@ export function BulkInventoryActionDialog({
           </button>
           <button
             onClick={handleConfirm}
-            className="px-4 py-2 bg-[#c1902f] text-white rounded-lg text-sm font-medium hover:bg-[#d4a43f] transition-colors shadow-sm"
+            className="px-4 py-2 bg-[#E42423] text-white rounded-lg text-sm font-medium hover:bg-[#f45a59] transition-colors shadow-sm"
           >
             Confirm & Continue
           </button>

@@ -164,7 +164,7 @@ export function MerchandisePreviewModal({ item, onClose }: MerchandisePreviewMod
                           key={index}
                           className={`w-3 h-3 rounded-full ${
                             index === currentImageIndex
-                              ? 'bg-[#c1902f]'
+                              ? 'bg-[#E42423]'
                               : 'bg-gray-300 hover:bg-gray-400'
                           }`}
                           onClick={() => setCurrentImageIndex(index)}
@@ -206,7 +206,7 @@ export function MerchandisePreviewModal({ item, onClose }: MerchandisePreviewMod
                         key={size}
                         className={`px-4 py-2 border rounded-md text-sm font-medium
                           ${selectedSize === size
-                            ? 'border-[#c1902f] bg-[#c1902f]/10 text-[#c1902f]'
+                            ? 'border-[#c1902f] bg-[#E42423]/10 text-[#c1902f]'
                             : sizeAvailable
                               ? 'border-gray-300 hover:border-[#c1902f] text-gray-700'
                               : 'border-gray-200 text-gray-400 cursor-not-allowed bg-gray-50'
@@ -241,7 +241,7 @@ export function MerchandisePreviewModal({ item, onClose }: MerchandisePreviewMod
                         key={color}
                         className={`px-4 py-2 border rounded-md text-sm font-medium
                           ${selectedColor === color
-                            ? 'border-[#c1902f] bg-[#c1902f]/10 text-[#c1902f]'
+                            ? 'border-[#c1902f] bg-[#E42423]/10 text-[#c1902f]'
                             : colorAvailable
                               ? 'border-gray-300 hover:border-[#c1902f] text-gray-700'
                               : 'border-gray-200 text-gray-400 cursor-not-allowed bg-gray-50'
@@ -305,7 +305,7 @@ export function MerchandisePreviewModal({ item, onClose }: MerchandisePreviewMod
               className={`w-full py-3 px-4 rounded-md font-medium text-white
                 ${isOutOfStock
                   ? 'bg-gray-400 cursor-not-allowed'
-                  : 'bg-[#c1902f] hover:bg-[#d4a43f]'
+                  : 'bg-[#E42423] hover:bg-[#f45a59]'
                 }`}
               onClick={handleAddToCart}
               disabled={isOutOfStock}

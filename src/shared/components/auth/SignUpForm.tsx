@@ -228,8 +228,8 @@ export function SignUpForm() {
                 disabled={loading}
                 className="
                   inline-flex items-center justify-center w-full px-4 py-3 mt-4 text-base font-medium
-                  text-white bg-[#c1902f] border border-transparent rounded-md
-                  hover:bg-[#d4a43f] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#c1902f]
+                  text-white bg-[#E42423] border border-transparent rounded-md
+                  hover:bg-[#f45a59] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#c1902f]
                   transition-colors duration-200 disabled:opacity-50
                 "
               >

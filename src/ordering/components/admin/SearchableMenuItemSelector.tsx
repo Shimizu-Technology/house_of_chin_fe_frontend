@@ -222,7 +222,7 @@ export function SearchableMenuItemSelector({ onSelect, onClose }: SearchableMenu
             <button
               className={`px-3 py-1.5 text-xs font-medium rounded-full transition-colors ${
                 selectedCategoryId === null
-                  ? 'bg-[#c1902f] text-white'
+                  ? 'bg-[#E42423] text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
               onClick={() => setSelectedCategoryId(null)}
@@ -235,7 +235,7 @@ export function SearchableMenuItemSelector({ onSelect, onClose }: SearchableMenu
                 key={category.id}
                 className={`px-3 py-1.5 text-xs font-medium rounded-full transition-colors ${
                   selectedCategoryId === category.id
-                    ? 'bg-[#c1902f] text-white'
+                    ? 'bg-[#E42423] text-white'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
                 onClick={() => setSelectedCategoryId(category.id)}

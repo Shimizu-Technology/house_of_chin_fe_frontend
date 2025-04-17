@@ -455,7 +455,7 @@ export function ItemCustomizationModal({ item, onClose, onAddToCart }: ItemCusto
                   <button
                     onClick={() => toggleGroupExpansion(groupId)}
                     className={`w-full p-3 text-left flex items-center justify-between
-                      ${needsAttention ? 'bg-red-50' : isExpanded ? 'bg-[#c1902f]/10' : 'bg-gray-50'}
+                      ${needsAttention ? 'bg-red-50' : isExpanded ? 'bg-[#E42423]/10' : 'bg-gray-50'}
                       ${needsAttention ? 'border-red-200' : isExpanded ? 'border-[#c1902f]' : 'border-gray-200'}
                       transition-colors duration-200
                     `}
@@ -540,7 +540,7 @@ export function ItemCustomizationModal({ item, onClose, onAddToCart }: ItemCusto
                               className={`
                                 block w-full text-left px-4 py-2 border rounded-md cursor-pointer
                                 ${isSelected
-                                  ? 'border-[#c1902f] bg-[#c1902f]/10'
+                                  ? 'border-[#c1902f] bg-[#E42423]/10'
                                   : 'border-gray-200 hover:border-[#c1902f]'
                                 }
                               `}
@@ -695,7 +695,7 @@ export function ItemCustomizationModal({ item, onClose, onAddToCart }: ItemCusto
               onClick={handleAddToCart}
               disabled={!isValid()}
               className={`
-                flex-1 py-3 bg-[#c1902f] text-white rounded-md font-medium
+                flex-1 py-3 bg-[#E42423] text-white rounded-md font-medium
                 focus:outline-none focus:ring-2 focus:ring-[#c1902f] focus:ring-opacity-50
                 ${isValid()
                   ? 'hover:bg-[#a97c28]'

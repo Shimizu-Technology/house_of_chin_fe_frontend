@@ -103,7 +103,7 @@ export function PromoManager({ restaurantId }: PromoManagerProps) {
       <div className="flex justify-end mb-6">
         <button
           onClick={handleAdd}
-          className="flex items-center px-4 py-2 bg-[#c1902f] text-white rounded-md hover:bg-[#d4a43f]"
+          className="flex items-center px-4 py-2 bg-[#E42423] text-white rounded-md hover:bg-[#f45a59]"
         >
           <Plus className="h-5 w-5 mr-2" />
           Add Promo Code
@@ -227,7 +227,7 @@ export function PromoManager({ restaurantId }: PromoManagerProps) {
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-[#c1902f] text-white rounded-md hover:bg-[#d4a43f]"
+                  className="px-4 py-2 bg-[#E42423] text-white rounded-md hover:bg-[#f45a59]"
                 >
                   <Save className="h-5 w-5 mr-2 inline-block" />
                   Save

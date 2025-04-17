@@ -526,7 +526,7 @@ export function AdminDashboard() {
 
         {/* Header with icon, order number and status */}
         <div className="flex items-start mb-3">
-          <div className="bg-[#c1902f] bg-opacity-10 p-2 rounded-lg mr-3 flex-shrink-0">
+          <div className="bg-[#E42423] bg-opacity-10 p-2 rounded-lg mr-3 flex-shrink-0">
             <ShoppingBag className="h-5 w-5 text-[#c1902f]" />
           </div>
           <div className="flex-1 min-w-0">
@@ -615,7 +615,7 @@ export function AdminDashboard() {
                   console.error(`[ORDER_DEBUG] Error during view order navigation:`, error);
                 });
             }}
-            className="flex-1 bg-[#c1902f] text-white px-3 py-2 rounded-lg font-medium text-sm hover:bg-[#d4a43f] transition-colors shadow-sm"
+            className="flex-1 bg-[#E42423] text-white px-3 py-2 rounded-lg font-medium text-sm hover:bg-[#f45a59] transition-colors shadow-sm"
           >
             View Order
           </button>
@@ -696,7 +696,7 @@ export function AdminDashboard() {
               setActiveTab('menu');
               setOpenInventoryForItem(item.id);
             }}
-            className="flex-1 bg-[#c1902f] text-white px-3 py-2 rounded-lg font-medium text-sm hover:bg-[#d4a43f] transition-colors shadow-sm"
+            className="flex-1 bg-[#E42423] text-white px-3 py-2 rounded-lg font-medium text-sm hover:bg-[#f45a59] transition-colors shadow-sm"
           >
             Manage
           </button>
@@ -1352,7 +1352,7 @@ useEffect(() => {
             <nav className="flex -mb-px" role="tablist">
               {/* For staff users, simplify the UI by only showing the Orders tab */}
               {isStaffOnly ? (
-                <div className="flex-shrink-0 whitespace-nowrap px-4 py-4 border-b-2 border-[#c1902f] text-center font-medium text-sm text-[#c1902f]">
+                <div className="flex-shrink-0 whitespace-nowrap px-4 py-4 border-b-2 border-[#E42423] text-center font-medium text-sm text-[#E42423]">
                   <div className="flex items-center">
                     <ShoppingBag className="h-5 w-5 mx-auto mb-1" />
                     Order Management
@@ -1369,7 +1369,7 @@ useEffect(() => {
                       text-center font-medium text-sm
                       ${
                         activeTab === id
-                          ? 'border-[#c1902f] text-[#c1902f]'
+                          ? 'border-[#E42423] text-[#E42423]'
                           : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                       }
                     `}

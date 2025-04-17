@@ -133,7 +133,7 @@ export function OrderDetailsModal({
           <div className="flex justify-end">
             <button
               onClick={onClose}
-              className="px-4 py-2 bg-[#c1902f] text-white text-sm rounded hover:bg-[#d4a43f]"
+              className="px-4 py-2 bg-[#E42423] text-white text-sm rounded hover:bg-[#f45a59]"
             >
               Close
             </button>

@@ -26,10 +26,10 @@ function useMediaQuery(query: string) {
 // Get colors based on restaurant context
 function getColors(): { primary: string; hover: string; light: string; } {
   const { restaurant } = useRestaurantStore.getState();
-  // Use Shimizu Technology blue for Shimizu, Hafaloha gold for Hafaloha
+  // Use Shimizu Technology blue for Shimizu, red for House of Chin Fe
   return restaurant?.id === 2 
     ? { primary: '#0078d4', hover: '#50a3d9', light: '#e6f3fc' } 
-    : { primary: '#c1902f', hover: '#d4a43f', light: '#f9f5ec' };
+    : { primary: '#E42423', hover: '#f45a59', light: '#fde8e8' };
 }
 
 interface LayoutToggleProps {

@@ -1,13 +1,13 @@
 // src/ordering/components/loyalty/LoyaltyTeaser.tsx
-import React from 'react';
+
 import { Gift, Star } from 'lucide-react';
 
 export function LoyaltyTeaser() {
   return (
-    <div className="bg-gradient-to-r from-[#c1902f] to-[#d4a43f] text-white p-6 rounded-lg shadow-md">
+    <div className="bg-gradient-to-r from-[#E42423] to-[#f45a59] text-white p-6 rounded-lg shadow-md">
       <div className="flex items-center justify-between">
         <div>
-          <h3 className="text-xl font-bold mb-2">Håfaloha Rewards Coming Soon!</h3>
+          <h3 className="text-xl font-bold mb-2">House of Chin Fe Rewards Coming Soon!</h3>
           <p className="text-white/90 mb-4">
             Join our loyalty program and earn points with every order.
           </p>
@@ -26,7 +26,7 @@ export function LoyaltyTeaser() {
       
       <div className="mt-6">
         <button
-          className="bg-white text-[#c1902f] px-6 py-2 rounded-md font-semibold hover:bg-gray-100 transition-colors"
+          className="bg-white text-[#E42423] px-6 py-2 rounded-md font-semibold hover:bg-gray-100 transition-colors"
           onClick={() => alert('Coming soon! Stay tuned for our loyalty program launch.')}
         >
           Get Notified

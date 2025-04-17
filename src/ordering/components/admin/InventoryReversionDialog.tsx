@@ -88,7 +88,7 @@ export function InventoryReversionDialog({ itemName, onClose, onConfirm }: Inven
           </button>
           <button
             type="button"
-            className="px-4 py-2 bg-[#c1902f] border border-transparent rounded-md text-white hover:bg-[#d4a43f] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#c1902f]"
+            className="px-4 py-2 bg-[#E42423] border border-transparent rounded-md text-white hover:bg-[#f45a59] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#c1902f]"
             onClick={() => {
               if (action === 'mark_as_damaged' && !reason.trim()) {
                 alert('Please provide a reason for marking the item as damaged.');

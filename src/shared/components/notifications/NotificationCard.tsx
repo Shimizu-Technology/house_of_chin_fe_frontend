@@ -103,7 +103,7 @@ const NotificationCard: React.FC<NotificationCardProps> = ({
             <button
               onClick={() => onView(notification)}
               className="flex items-center px-2.5 py-1 text-xs font-medium rounded-md 
-                bg-[#c1902f] text-white hover:bg-[#d4a43f] transition-colors"
+                bg-[#E42423] text-white hover:bg-[#f45a59] transition-colors"
             >
               <Eye className="h-3.5 w-3.5 mr-1" />
               View
@@ -163,7 +163,7 @@ const NotificationCard: React.FC<NotificationCardProps> = ({
                                 min="1"
                                 value={restockQuantity}
                                 onChange={(e) => setRestockQuantity(Math.max(1, parseInt(e.target.value) || 1))}
-                                className="flex-1 min-w-0 block w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-[#c1902f] focus:border-[#c1902f]"
+                                className="flex-1 min-w-0 block w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-[#E42423] focus:border-[#E42423]"
                                 placeholder="10"
                               />
                             </div>
@@ -177,7 +177,7 @@ const NotificationCard: React.FC<NotificationCardProps> = ({
                       type="button" 
                       onClick={handleRestock}
                       disabled={isLoading}
-                      className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-[#c1902f] text-base font-medium text-white hover:bg-[#d4a43f] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#c1902f] sm:ml-3 sm:w-auto sm:text-sm disabled:opacity-50"
+                      className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-[#E42423] text-base font-medium text-white hover:bg-[#f45a59] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#E42423] sm:ml-3 sm:w-auto sm:text-sm disabled:opacity-50"
                     >
                       {isLoading ? (
                         <>

@@ -607,7 +607,7 @@ export function OptionGroupsModal({ item, onClose }: OptionGroupsModalProps) {
                 </div>
                 <button
                   onClick={handleCreateGroup}
-                  className="px-2 py-1 bg-[#c1902f] text-white text-sm rounded hover:bg-[#d4a43f]"
+                  className="px-2 py-1 bg-[#E42423] text-white text-sm rounded hover:bg-[#f45a59]"
                 >
                   + Create Group
                 </button>
@@ -762,7 +762,7 @@ export function OptionGroupsModal({ item, onClose }: OptionGroupsModalProps) {
           </button>
           <button
             onClick={handleSaveAllChanges}
-            className="px-4 py-2 bg-[#c1902f] text-white rounded-md hover:bg-[#d4a43f] transition-all duration-200 transform hover:scale-[1.02] active:scale-[0.98]"
+            className="px-4 py-2 bg-[#E42423] text-white rounded-md hover:bg-[#f45a59] transition-all duration-200 transform hover:scale-[1.02] active:scale-[0.98]"
           >
             <Save className="h-5 w-5 mr-2 inline" />
             Save Changes

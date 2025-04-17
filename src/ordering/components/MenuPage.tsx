@@ -272,7 +272,7 @@ export function MenuPage() {
             className={`
               flex-shrink-0 px-4 py-2 rounded-md
               ${selectedCategoryId === null 
-                ? 'bg-[#c1902f] text-white' 
+                ? 'bg-[#E42423] text-white' 
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}
             `}
             onClick={() => setSelectedCategoryId(null)}
@@ -287,7 +287,7 @@ export function MenuPage() {
               className={`
                 flex-shrink-0 px-4 py-2 rounded-md
                 ${selectedCategoryId === cat.id
-                  ? 'bg-[#c1902f] text-white'
+                  ? 'bg-[#E42423] text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}
               `}
               onClick={() => setSelectedCategoryId(cat.id)}

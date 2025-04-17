@@ -411,7 +411,7 @@ export function CustomizationModal({ item, onClose }: CustomizationModalProps) {
                   <button 
                     onClick={() => toggleGroupExpansion(groupId)}
                     className={`w-full p-3 text-left flex items-center justify-between
-                      ${needsAttention ? 'bg-red-50' : isExpanded ? 'bg-[#c1902f]/10' : 'bg-gray-50'}
+                      ${needsAttention ? 'bg-red-50' : isExpanded ? 'bg-[#E42423]/10' : 'bg-gray-50'}
                       ${needsAttention ? 'border-red-200' : isExpanded ? 'border-[#c1902f]' : 'border-gray-200'}
                       transition-colors duration-200
                     `}
@@ -502,7 +502,7 @@ export function CustomizationModal({ item, onClose }: CustomizationModalProps) {
                               className={`block w-full text-left px-4 py-2 border rounded-md 
                                 ${
                                   selected
-                                    ? 'border-[#c1902f] bg-[#c1902f]/10'
+                                    ? 'border-[#c1902f] bg-[#E42423]/10'
                                     : 'border-gray-200 hover:border-[#c1902f]'
                                 }
                               `}
@@ -663,7 +663,7 @@ export function CustomizationModal({ item, onClose }: CustomizationModalProps) {
               onClick={handleAddToCart}
               className={`px-4 py-2 text-white rounded-md ${
                 isValid 
-                  ? 'bg-[#c1902f] hover:bg-[#d4a43f]' 
+                  ? 'bg-[#E42423] hover:bg-[#f45a59]' 
                   : 'bg-gray-400 cursor-not-allowed'
               }`}
               disabled={!isValid}

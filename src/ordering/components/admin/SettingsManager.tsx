@@ -117,8 +117,8 @@ export function SettingsManager({ restaurantId }: SettingsManagerProps) {
                 text-center font-medium text-sm
                 ${
                   activeSettingsTab === id
-                    ? 'border-[#c1902f] text-[#c1902f]'
-                    : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                    ? 'border-[#E42423] text-[#E42423]'
+                    : 'border-transparent text-gray-500 hover:text-[#f45a59] hover:border-[#f45a59]'
                 }
               `}
             >

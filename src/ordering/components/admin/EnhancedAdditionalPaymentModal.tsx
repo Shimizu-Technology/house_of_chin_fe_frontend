@@ -620,7 +620,7 @@ export function EnhancedAdditionalPaymentModal({
                       type="button"
                       className={`px-3 py-2 border rounded-md text-sm font-medium transition-colors ${
                         paymentMethod === 'credit_card'
-                          ? 'bg-[#c1902f] text-white border-[#c1902f]'
+                          ? 'bg-[#E42423] text-white border-[#c1902f]'
                           : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
                       }`}
                       onClick={() => setPaymentMethod('credit_card')}
@@ -631,7 +631,7 @@ export function EnhancedAdditionalPaymentModal({
                       type="button"
                       className={`px-3 py-2 border rounded-md text-sm font-medium transition-colors ${
                         paymentMethod === 'stripe_reader'
-                          ? 'bg-[#c1902f] text-white border-[#c1902f]'
+                          ? 'bg-[#E42423] text-white border-[#c1902f]'
                           : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
                       }`}
                       onClick={() => setPaymentMethod('stripe_reader')}
@@ -642,7 +642,7 @@ export function EnhancedAdditionalPaymentModal({
                       type="button"
                       className={`px-3 py-2 border rounded-md text-sm font-medium transition-colors ${
                         paymentMethod === 'cash'
-                          ? 'bg-[#c1902f] text-white border-[#c1902f]'
+                          ? 'bg-[#E42423] text-white border-[#c1902f]'
                           : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
                       }`}
                       onClick={() => setPaymentMethod('cash')}
@@ -653,7 +653,7 @@ export function EnhancedAdditionalPaymentModal({
                       type="button"
                       className={`px-3 py-2 border rounded-md text-sm font-medium transition-colors ${
                         paymentMethod === 'payment_link'
-                          ? 'bg-[#c1902f] text-white border-[#c1902f]'
+                          ? 'bg-[#E42423] text-white border-[#c1902f]'
                           : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
                       }`}
                       onClick={() => setPaymentMethod('payment_link')}
@@ -664,7 +664,7 @@ export function EnhancedAdditionalPaymentModal({
                       type="button"
                       className={`px-3 py-2 border rounded-md text-sm font-medium transition-colors ${
                         paymentMethod === 'clover'
-                          ? 'bg-[#c1902f] text-white border-[#c1902f]'
+                          ? 'bg-[#E42423] text-white border-[#c1902f]'
                           : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
                       }`}
                       onClick={() => setPaymentMethod('clover')}
@@ -675,7 +675,7 @@ export function EnhancedAdditionalPaymentModal({
                       type="button"
                       className={`px-3 py-2 border rounded-md text-sm font-medium transition-colors ${
                         paymentMethod === 'revel'
-                          ? 'bg-[#c1902f] text-white border-[#c1902f]'
+                          ? 'bg-[#E42423] text-white border-[#c1902f]'
                           : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
                       }`}
                       onClick={() => setPaymentMethod('revel')}
@@ -686,7 +686,7 @@ export function EnhancedAdditionalPaymentModal({
                       type="button"
                       className={`px-3 py-2 border rounded-md text-sm font-medium transition-colors ${
                         paymentMethod === 'other'
-                          ? 'bg-[#c1902f] text-white border-[#c1902f]'
+                          ? 'bg-[#E42423] text-white border-[#c1902f]'
                           : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
                       }`}
                       onClick={() => setPaymentMethod('other')}
@@ -856,7 +856,7 @@ export function EnhancedAdditionalPaymentModal({
                             onClick={() => setCashReceived(amount)}
                             className={`px-3 py-2 border rounded-md text-sm font-medium transition-colors
                               ${cashReceived === amount
-                                ? 'bg-[#c1902f] text-white border-[#c1902f]'
+                                ? 'bg-[#E42423] text-white border-[#c1902f]'
                                 : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
                               }`}
                           >
@@ -868,7 +868,7 @@ export function EnhancedAdditionalPaymentModal({
                           onClick={() => setCashReceived(Math.ceil(total))}
                           className={`px-3 py-2 border rounded-md text-sm font-medium transition-colors
                             ${cashReceived === Math.ceil(total)
-                              ? 'bg-[#c1902f] text-white border-[#c1902f]'
+                              ? 'bg-[#E42423] text-white border-[#c1902f]'
                               : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
                             }`}
                         >
@@ -879,7 +879,7 @@ export function EnhancedAdditionalPaymentModal({
                           onClick={() => setCashReceived(total)}
                           className={`px-3 py-2 border rounded-md text-sm font-medium transition-colors
                             ${cashReceived === total
-                              ? 'bg-[#c1902f] text-white border-[#c1902f]'
+                              ? 'bg-[#E42423] text-white border-[#c1902f]'
                               : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
                             }`}
                         >
@@ -1027,7 +1027,7 @@ export function EnhancedAdditionalPaymentModal({
                     type="button"
                     onClick={handleCreditCardPayment}
                     disabled={isLoading}
-                    className="px-4 py-2 bg-[#c1902f] text-white rounded-md text-sm font-medium hover:bg-[#d4a43f] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#c1902f]"
+                    className="px-4 py-2 bg-[#E42423] text-white rounded-md text-sm font-medium hover:bg-[#f45a59] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#c1902f]"
                   >
                     {isLoading ? 'Processing...' : 'Process Card Payment'}
                   </button>
@@ -1037,7 +1037,7 @@ export function EnhancedAdditionalPaymentModal({
                     type="button"
                     onClick={handleCashPayment}
                     disabled={isLoading || cashReceived < total}
-                    className="px-4 py-2 bg-[#c1902f] text-white rounded-md text-sm font-medium hover:bg-[#d4a43f] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#c1902f] disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-4 py-2 bg-[#E42423] text-white rounded-md text-sm font-medium hover:bg-[#f45a59] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#c1902f] disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isLoading ? 'Processing...' : 'Complete Cash Payment'}
                   </button>
@@ -1047,7 +1047,7 @@ export function EnhancedAdditionalPaymentModal({
                     type="button"
                     onClick={handleManualPayment}
                     disabled={isLoading || !paymentDate}
-                    className="px-4 py-2 bg-[#c1902f] text-white rounded-md text-sm font-medium hover:bg-[#d4a43f] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#c1902f] disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-4 py-2 bg-[#E42423] text-white rounded-md text-sm font-medium hover:bg-[#f45a59] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#c1902f] disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isLoading ? 'Processing...' : `Complete ${paymentMethod.charAt(0).toUpperCase() + paymentMethod.slice(1)} Payment`}
                   </button>
@@ -1057,7 +1057,7 @@ export function EnhancedAdditionalPaymentModal({
                     type="button"
                     onClick={handleSendPaymentLink}
                     disabled={isLoading || (!customerEmail && !customerPhone)}
-                    className="px-4 py-2 bg-[#c1902f] text-white rounded-md text-sm font-medium hover:bg-[#d4a43f] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#c1902f] disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-4 py-2 bg-[#E42423] text-white rounded-md text-sm font-medium hover:bg-[#f45a59] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#c1902f] disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isLoading ? 'Sending...' : 'Send Payment Link'}
                   </button>
@@ -1093,7 +1093,7 @@ export function EnhancedAdditionalPaymentModal({
                     });
                   }}
                   disabled={isLoading}
-                  className="px-4 py-2 bg-[#c1902f] text-white rounded-md text-sm font-medium hover:bg-[#d4a43f] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#c1902f]"
+                  className="px-4 py-2 bg-[#E42423] text-white rounded-md text-sm font-medium hover:bg-[#f45a59] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#c1902f]"
                 >
                   {isLoading ? 'Processing...' : 'Pay Now'}
                 </button>
@@ -1155,7 +1155,7 @@ export function EnhancedAdditionalPaymentModal({
                     setIsLoading(false);
                   }
                 }}
-                className="px-4 py-2 bg-[#c1902f] text-white rounded-md text-sm font-medium hover:bg-[#d4a43f] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#c1902f] disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-4 py-2 bg-[#E42423] text-white rounded-md text-sm font-medium hover:bg-[#f45a59] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#c1902f] disabled:opacity-50 disabled:cursor-not-allowed"
                 disabled={isLoading}
               >
                 {isLoading ? 'Processing...' : 'Mark as Paid & Close'}

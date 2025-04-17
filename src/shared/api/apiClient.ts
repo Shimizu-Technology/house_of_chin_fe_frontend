@@ -97,34 +97,34 @@ axiosInstance.interceptors.request.use((config: InternalAxiosRequestConfig) => {
   }
     // Always add restaurant_id to authenticated requests
   if (token) {
-    // For Hafaloha frontend, always use restaurant ID 1
+    // For House of Chin Fe frontend, always use restaurant ID 3
     // This ensures proper tenant isolation
-    const hafalohaRestaurantId = import.meta.env.VITE_RESTAURANT_ID || '1';
+    const restaurantId = import.meta.env.VITE_RESTAURANT_ID || '3';
     
     // Add restaurant_id to headers for all authenticated requests
-    config.headers.set('X-Restaurant-ID', hafalohaRestaurantId);
+    config.headers.set('X-Restaurant-ID', restaurantId);
     
     // Also add to params for backward compatibility and specific endpoints
     config.params = config.params || {};
     
     // If endpoint specifically needs restaurant context or it's an authenticated request
     if (config.url && (needsRestaurantContext(config.url) || token)) {
-      // Always use the Hafaloha restaurant ID (1) for this frontend
+      // Always use the House of Chin Fe restaurant ID (3) for this frontend
       // This prevents data leakage from other restaurants
       
       // Only set if not already specified in the request
       if (!config.params.restaurant_id) {
-        config.params.restaurant_id = hafalohaRestaurantId;
+        config.params.restaurant_id = restaurantId;
       }
     }
   } else if (config.url && needsRestaurantContext(config.url)) {
     // For unauthenticated requests to endpoints that need restaurant context
-    // Always use Hafaloha ID (1) for this frontend
-    const hafalohaRestaurantId = import.meta.env.VITE_RESTAURANT_ID || '1';
+    // Always use House of Chin Fe ID (3) for this frontend
+    const restaurantId = import.meta.env.VITE_RESTAURANT_ID || '3';
     
     config.params = config.params || {};
     if (!config.params.restaurant_id) {
-      config.params.restaurant_id = hafalohaRestaurantId;
+      config.params.restaurant_id = restaurantId;
     }
   }
   

@@ -73,7 +73,7 @@ export const VipCodeInput: React.FC<VipCodeInputProps> = ({ onChange }) => {
                 ? 'border-green-300 focus:ring-green-500' 
                 : errorMessage 
                   ? 'border-red-300 focus:ring-red-500' 
-                  : 'border-gray-300 focus:ring-[#c1902f]'
+                  : 'border-gray-300 focus:ring-[#E42423]'
             }`}
           />
           {errorMessage && (
@@ -87,7 +87,7 @@ export const VipCodeInput: React.FC<VipCodeInputProps> = ({ onChange }) => {
         <button
           onClick={validateCode}
           disabled={isValidating || !code.trim()}
-          className={`px-4 py-2 bg-[#c1902f] text-white rounded-md hover:bg-[#a67927] focus:outline-none focus:ring-2 focus:ring-[#c1902f] focus:ring-opacity-50 ${
+          className={`px-4 py-2 bg-[#E42423] text-white rounded-md hover:bg-[#f45a59] focus:outline-none focus:ring-2 focus:ring-[#E42423] focus:ring-opacity-50 ${
             (isValidating || !code.trim()) ? 'opacity-50 cursor-not-allowed' : ''
           }`}
         >

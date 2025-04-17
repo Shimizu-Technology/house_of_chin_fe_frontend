@@ -23,9 +23,9 @@ class NotificationStorageService {
   private lastSyncTimestamp: number = 0;
   private syncInProgress: boolean = false;
   private maxRetryCount: number = 3;
-  private storageKey: string = 'hafaloha_notifications';
-  private pendingAcknowledgmentsKey: string = 'hafaloha_pending_acknowledgments';
-  private lastSyncKey: string = 'hafaloha_last_notification_sync';
+  private storageKey: string = 'house_of_chin_fe_notifications';
+  private pendingAcknowledgmentsKey: string = 'house_of_chin_fe_pending_acknowledgments';
+  private lastSyncKey: string = 'house_of_chin_fe_last_notification_sync';
   
   /**
    * Private constructor to enforce singleton pattern

@@ -12,7 +12,7 @@ export function SettingsHeader({ title, description, icon }: SettingsHeaderProps
   return (
     <div className="mb-6">
       <h2 className="text-xl font-semibold text-gray-900 mb-2 flex items-center">
-        {icon && <span className="mr-2 text-[#c1902f]">{icon}</span>}
+        {icon && <span className="mr-2 text-[#E42423]">{icon}</span>}
         {title}
       </h2>
       {description && (

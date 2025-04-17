@@ -14,6 +14,7 @@ export const config = {
   // Restaurant name and branding
   restaurantName: 'House of Chin Fe',
   primaryColor: '#E42423',
+  phoneNumber: '+16714726135',
   
   // Social media links
   facebookUrl: 'https://www.facebook.com/thenewhouseofchinfeguam/',

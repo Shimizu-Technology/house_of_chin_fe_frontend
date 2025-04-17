@@ -149,7 +149,7 @@ const NotificationContainer: React.FC<NotificationContainerProps> = ({
       {/* Loading indicator */}
       {loading && (
         <div className="flex justify-center items-center py-4">
-          <div className="animate-spin rounded-full h-6 w-6 border-t-2 border-[#c1902f]"></div>
+          <div className="animate-spin rounded-full h-6 w-6 border-t-2 border-[#E42423]"></div>
         </div>
       )}
       

@@ -1,11 +1,11 @@
 {
-  "name": "Hafaloha",
-  "short_name": "Hafaloha",
-  "description": "Hafaloha online ordering and restaurant management system",
+  "name": "House of Chin Fe",
+  "short_name": "House of Chin Fe",
+  "description": "House of Chin Fe online ordering system",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#c1902f",
+  "theme_color": "#E42423",
   "icons": [
     {
       "src": "/icons/icon-192.png",

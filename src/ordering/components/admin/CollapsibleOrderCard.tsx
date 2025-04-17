@@ -114,7 +114,7 @@ function findBestMatchingItem(
       return keyParts.some(part => 
         part.includes(itemName) || 
         itemName.includes(part) ||
-        // Handle common variations like "Burger" matching "Hafaloha Burger"
+        // Handle common variations like "Noodles" matching "House of Chin Fe Noodles"
         (itemName.includes("burger") && part.includes("burger")) ||
         (itemName.includes("bowl") && part.includes("bowl")) ||
         // Handle "Cali Poke" or other poke variations
@@ -572,7 +572,7 @@ export function CollapsibleOrderCard({
               // Try different matching strategies
               return keyLower.includes(itemNameLower) || 
                      itemNameLower.includes(keyLower) ||
-                     // Handle common variations like "Burger" matching "Hafaloha Burger"
+                     // Handle common variations like "Noodles" matching "House of Chin Fe Noodles"
                      (itemNameLower.includes("burger") && keyLower.includes("burger")) ||
                      (itemNameLower.includes("bowl") && keyLower.includes("bowl")) ||
                      // Handle "Cali Poke" or other poke variations

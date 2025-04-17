@@ -367,7 +367,7 @@ export function CheckoutPage() {
           </div>
         </div>
       )}
-      <h1 className="text-3xl font-bold text-gray-900 mb-8">Checkout</h1>
+      <h1 className="text-3xl font-serif text-gray-900 mb-8">Checkout</h1>
       <div className="lg:grid lg:grid-cols-12 lg:gap-8">
         {/* LEFT: The form */}
         <div className="lg:col-span-7">
@@ -388,7 +388,7 @@ export function CheckoutPage() {
             
             {/* Contact Info */}
             <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-              <h2 className="text-xl font-semibold mb-4">Contact Information</h2>
+              <h2 className="text-xl font-serif text-gray-900 mb-4">Contact Information</h2>
               <div className="space-y-4">
                 {/* NAME */}
                 <div>
@@ -407,7 +407,7 @@ export function CheckoutPage() {
                     value={formData.name}
                     onChange={handleInputChange}
                     className="w-full px-4 py-2 border border-gray-300 rounded-md
-                      focus:ring-[#c1902f] focus:border-[#c1902f]"
+                      focus:ring-[#E42423] focus:border-[#E42423]"
                   />
                 </div>
 
@@ -428,7 +428,7 @@ export function CheckoutPage() {
                     value={formData.email}
                     onChange={handleInputChange}
                     className="w-full px-4 py-2 border border-gray-300 rounded-md
-                      focus:ring-[#c1902f] focus:border-[#c1902f]"
+                      focus:ring-[#E42423] focus:border-[#E42423]"
                   />
                 </div>
 
@@ -450,7 +450,7 @@ export function CheckoutPage() {
                     onChange={handleInputChange}
                     placeholder="+1671"
                     className="w-full px-4 py-2 border border-gray-300 rounded-md
-                      focus:ring-[#c1902f] focus:border-[#c1902f]"
+                      focus:ring-[#E42423] focus:border-[#E42423]"
                   />
                 </div>
               </div>
@@ -464,7 +464,7 @@ export function CheckoutPage() {
             {/* Payment Information - only show if not VIP-only mode OR if VIP code is valid */}
             {(!restaurant?.vip_only_checkout || vipCodeValid) && (
               <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-                <h2 className="text-xl font-semibold mb-4">Payment Information</h2>
+                <h2 className="text-xl font-serif text-gray-900 mb-4">Payment Information</h2>
                 
                 {/* Conditionally render PayPal or Stripe checkout based on payment processor setting */}
                 {restaurant?.admin_settings?.payment_gateway?.payment_processor === 'stripe' ? (
@@ -494,7 +494,7 @@ export function CheckoutPage() {
 
             {/* Special Instructions */}
             <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-              <h2 className="text-xl font-semibold mb-4">Special Instructions</h2>
+              <h3 className="text-lg font-serif text-gray-900 mb-4">Special Instructions</h3>
               <textarea
                 name="specialInstructions"
                 value={formData.specialInstructions}
@@ -524,38 +524,36 @@ export function CheckoutPage() {
                     onChange={handleInputChange}
                     placeholder="Enter promo code"
                     className="flex-1 px-4 py-2 border border-gray-300 rounded-md
-                      focus:ring-[#c1902f] focus:border-[#c1902f]"
+                      focus:ring-[#E42423] focus:border-[#E42423]"
                   />
                   <button
                     type="button"
                     onClick={handleApplyPromo}
-                    className="px-4 py-2 bg-gray-100 text-gray-700
-                      rounded-md hover:bg-gray-200"
+                    className="px-4 py-2 bg-[#E42423] text-white
+                      rounded-md hover:bg-[#f45a59] transition-colors duration-200"
                   >
                     Apply
                   </button>
                 </div>
               </div>
 
-              <div className="flex justify-between items-center mb-4">
-                <span className="text-lg font-medium">Total</span>
-                <div className="text-right">
-                  {appliedPromo && (
-                    <span className="block text-sm text-gray-500 line-through">
-                      ${rawTotal.toFixed(2)}
-                    </span>
-                  )}
-                  <span className="text-2xl font-bold">
-                    ${finalTotal.toFixed(2)}
-                  </span>
-                </div>
-              </div>
-
+              <div className="flex justify-between py-2 text-base">
+                <p className="text-gray-900 font-serif">Subtotal</p>
+                <p className="text-[#E42423] font-serif">${rawTotal.toFixed(2)}</p>
+              </div>  
+              {appliedPromo && (
+                <span className="block text-sm text-gray-500 line-through">
+                  ${rawTotal.toFixed(2)}
+                </span>
+              )}
+              <span className="text-2xl font-serif text-[#E42423] font-bold">
+                ${finalTotal.toFixed(2)}
+              </span>
               <button
                 type="submit"
                 disabled={isSubmitting || (restaurant?.vip_only_checkout && !vipCodeValid)}
-                className={`w-full bg-[#c1902f] text-white py-3 px-4
-                  rounded-md hover:bg-[#d4a43f] transition-colors duration-200
+                className={`w-full bg-[#E42423] text-white py-3 px-4
+                  rounded-md hover:bg-[#f45a59] transition-colors duration-200
                   ${(isSubmitting || (restaurant?.vip_only_checkout && !vipCodeValid)) ? 'opacity-70 cursor-not-allowed' : ''}`}
               >
                 {isSubmitting ? 'Processing...' : (restaurant?.vip_only_checkout && !vipCodeValid) ? 'Validate VIP Code First' : 'Place Order'}
@@ -569,11 +567,11 @@ export function CheckoutPage() {
         <div className="lg:col-span-5 mt-8 lg:mt-0">
           {/* Cart Items Summary */}
           <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-            <h3 className="text-lg font-semibold mb-4">Order Summary</h3>
+            <h3 className="text-lg font-serif text-gray-900 mb-4">Order Summary</h3>
             
             {/* Location Details on the right side - always show if we have locations */}
             <div className="mb-4 pb-4 border-b border-gray-200">
-              <h4 className="text-md font-medium mb-2">Location</h4>
+              <h4 className="text-md font-serif text-gray-900 mb-2">Location</h4>
               <PickupInfo locationId={locationId} />
             </div>
             {cartItems.length === 0 ? (
@@ -589,7 +587,7 @@ export function CheckoutPage() {
                     />
                     <div className="flex-1">
                       <p className="font-medium">{item.name}</p>
-                      <p className="text-sm text-gray-500">Qty: {item.quantity}</p>
+                      <p className="text-sm font-serif text-[#E42423]">${item.price.toFixed(2)}</p>
                       {item.customizations && Object.keys(item.customizations).length > 0 && (
                         <p className="text-xs text-gray-500">
                           {Object.entries(item.customizations)

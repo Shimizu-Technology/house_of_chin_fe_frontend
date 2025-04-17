@@ -2,9 +2,9 @@ import React from 'react';
 
 // Brand colors
 export const brandColors = {
-  primary: '#c1902f',
-  primaryHover: '#d4a43f',
-  primaryLight: '#f5ecd9',
+  primary: '#E42423',
+  primaryHover: '#f45a59',
+  primaryLight: '#fde8e8',
   secondary: '#6c757d',
   success: '#28a745',
   danger: '#dc3545',

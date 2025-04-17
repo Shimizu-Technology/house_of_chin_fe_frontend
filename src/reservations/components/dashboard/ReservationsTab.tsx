@@ -232,7 +232,7 @@ export default function ReservationsTab() {
                 text-sm
                 font-medium
                 rounded-md
-                hover:bg-[#d4a43f]
+                hover:bg-[#f45a59]
                 transition-colors
               "
             >

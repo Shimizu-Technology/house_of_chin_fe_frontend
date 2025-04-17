@@ -193,7 +193,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
                 onClick={() => toggleSize(size)}
                 className={`h-9 w-10 flex items-center justify-center text-sm border ${
                   activeFilters.sizes.includes(size)
-                    ? 'border-[#c1902f] bg-[#c1902f] bg-opacity-10 text-[#c1902f]'
+                    ? 'border-[#c1902f] bg-[#E42423] bg-opacity-10 text-[#c1902f]'
                     : 'border-gray-300 text-gray-700 hover:bg-gray-50'
                 }`}
               >
@@ -269,7 +269,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
                 className={`py-2 px-3 text-sm border rounded text-left ${
                   activeFilters.priceRange?.min === range.min && 
                   activeFilters.priceRange?.max === range.max
-                    ? 'border-[#c1902f] bg-[#c1902f] bg-opacity-10 text-[#c1902f]'
+                    ? 'border-[#c1902f] bg-[#E42423] bg-opacity-10 text-[#c1902f]'
                     : 'border-gray-300 text-gray-700 hover:bg-gray-50'
                 }`}
               >
@@ -308,7 +308,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
                 onClick={() => toggleAvailability(status)}
                 className={`py-2 px-3 text-sm border rounded text-left flex items-center ${
                   activeFilters.availability.includes(status)
-                    ? 'border-[#c1902f] bg-[#c1902f] bg-opacity-10 text-[#c1902f]'
+                    ? 'border-[#c1902f] bg-[#E42423] bg-opacity-10 text-[#c1902f]'
                     : 'border-gray-300 text-gray-700 hover:bg-gray-50'
                 }`}
               >
@@ -333,7 +333,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
           </button>
           <button
             onClick={onClose}
-            className="flex-1 py-2 px-4 bg-[#c1902f] text-white rounded-md hover:bg-[#d4a43f] transition-colors"
+            className="flex-1 py-2 px-4 bg-[#E42423] text-white rounded-md hover:bg-[#f45a59] transition-colors"
           >
             Apply
           </button>

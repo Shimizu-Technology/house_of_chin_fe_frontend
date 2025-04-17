@@ -209,7 +209,7 @@ Party Size: ${confirmation.partySize} people`;
             <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <button
                 onClick={onClose}
-                className="flex-1 sm:flex-none rounded-md bg-[#c1902f] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#d4a43f]"
+                className="flex-1 sm:flex-none rounded-md bg-[#E42423] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#f45a59]"
               >
                 Done
               </button>
@@ -383,9 +383,9 @@ Party Size: ${confirmation.partySize} people`;
             <div className="pt-4">
               <button
                 type="submit"
-                className="w-full rounded-md bg-[#c1902f] px-3 py-2
+                className="w-full rounded-md bg-[#E42423] px-3 py-2
                            text-sm font-semibold text-white shadow-sm
-                           hover:bg-[#d4a43f]"
+                           hover:bg-[#f45a59]"
               >
                 Reserve Now
               </button>

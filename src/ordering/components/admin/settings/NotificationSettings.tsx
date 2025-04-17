@@ -302,7 +302,7 @@ export function NotificationSettings() {
       const response: any = await api.post('/admin/test_pushover', {
         user_key: userKey,
         app_token: settings.pushover?.app_token || undefined,
-        message: 'This is a test notification from Hafaloha',
+        message: 'This is a test notification from House of Chin Fe',
         title: 'Test Notification',
         priority: 0,
         sound: 'pushover'

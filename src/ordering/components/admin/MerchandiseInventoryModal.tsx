@@ -389,7 +389,7 @@ const MerchandiseInventoryModal: React.FC<MerchandiseInventoryModalProps> = ({
                 <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#c1902f]/20 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white 
                   after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white 
                   after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 
-                  after:transition-all peer-checked:bg-[#c1902f]"
+                  after:transition-all peer-checked:bg-[#E42423]"
                 />
                 <span className="ml-3 text-gray-900 font-medium">
                   Enable Inventory Tracking
@@ -436,7 +436,7 @@ const MerchandiseInventoryModal: React.FC<MerchandiseInventoryModalProps> = ({
                     {selectedVariants.size > 0 && (
                       <button
                         onClick={() => setShowBatchOperation(true)}
-                        className="bg-[#c1902f] hover:bg-[#a97c28] text-white px-3 py-1.5 rounded-md text-sm font-medium"
+                        className="bg-[#E42423] hover:bg-[#a97c28] text-white px-3 py-1.5 rounded-md text-sm font-medium"
                       >
                         Batch Update ({selectedVariants.size})
                       </button>
@@ -1084,7 +1084,7 @@ const MerchandiseInventoryModal: React.FC<MerchandiseInventoryModalProps> = ({
               disabled={
                 saving || (!enableTracking && !variantInventory.some((v) => v.changed))
               }
-              className="px-4 py-2 bg-[#c1902f] hover:bg-[#a97c28] text-white rounded-md disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-4 py-2 bg-[#E42423] hover:bg-[#a97c28] text-white rounded-md disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {saving ? 'Saving...' : 'Save Changes'}
             </button>

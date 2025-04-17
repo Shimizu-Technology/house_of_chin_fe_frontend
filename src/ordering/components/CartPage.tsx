@@ -38,15 +38,15 @@ export function CartPage() {
   if (cartItems.length === 0) {
     return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
-        <h2 className="text-xl sm:text-2xl font-bold mb-4">Your cart is empty</h2>
-        <p className="text-gray-600 mb-8">
+        <h2 className="text-xl sm:text-2xl font-serif text-[#333] mb-4">Your cart is empty</h2>
+        <p className="text-[#666] font-sans mb-8">
           Add some delicious items to get started!
         </p>
         <Link
           to="/menu"
           className="inline-flex items-center px-6 py-3 border border-transparent
-                     text-base font-medium rounded-md text-white
-                     bg-[#c1902f] hover:bg-[#d4a43f]"
+                     text-base font-sans font-medium rounded-md text-white
+                     bg-[#E42423] hover:bg-[#f45a59] shadow-sm hover:shadow transition-all duration-200"
         >
           Browse Menu
         </Link>
@@ -57,7 +57,7 @@ export function CartPage() {
   return (
     <>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">
+        <h1 className="text-2xl sm:text-3xl font-serif text-[#333] mb-8">
           Your Cart
         </h1>
 
@@ -84,25 +84,25 @@ export function CartPage() {
                   />
 
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-lg font-medium text-gray-900">{item.name}</h3>
+                    <h3 className="text-lg font-serif text-[#333]">{item.name}</h3>
 
                     {(item as any).description && (
-                      <p className="mt-1 text-sm text-gray-500">{(item as any).description}</p>
+                      <p className="mt-1 text-sm font-sans text-[#666]">{(item as any).description}</p>
                     )}
 
                     {/* If the item requires 24 hours, show it */}
                     {item.advance_notice_hours && item.advance_notice_hours >= 24 && (
-                      <p className="mt-1 text-sm text-red-600">
+                      <p className="mt-1 text-sm font-sans text-[#b31c1b]">
                         Requires 24 hours notice
                       </p>
                     )}
 
                     {/* If customizations exist, show them */}
                     {item.customizations && (
-                      <div className="mt-1 text-sm text-gray-600">
+                      <div className="mt-1 text-sm font-sans text-[#666]">
                         {Object.entries(item.customizations).map(([groupName, picks]) => (
                           <p key={groupName}>
-                            <strong>{groupName}:</strong> {picks.join(', ')}
+                            <strong className="font-serif">{groupName}:</strong> {picks.join(', ')}
                           </p>
                         ))}
                       </div>
@@ -110,8 +110,8 @@ export function CartPage() {
 
                     {/* NEW: Per-item notes text area */}
                     <textarea
-                      className="mt-2 w-full border border-gray-300 rounded-md p-2 text-sm
-                               focus:ring-[#c1902f] focus:border-[#c1902f]"
+                      className="mt-2 w-full border border-gray-300 rounded-md p-2 text-sm font-sans
+                               focus:ring-[#E42423] focus:border-[#E42423]"
                       placeholder="Any notes for this item? (e.g. 'No onions', 'Extra sauce')"
                       value={item.notes || ''}
                       onChange={(e) => setCartItemNotes(itemKey, e.target.value)}
@@ -139,7 +139,7 @@ export function CartPage() {
                         {/* "Customize Again" button - only show for items that can be customized */}
                         {item.customizations && Object.keys(item.customizations).length > 0 && (
                           <button
-                            className="mr-2 px-3 py-1.5 text-sm text-[#c1902f] border border-[#c1902f] rounded-md hover:bg-[#c1902f]/10 flex items-center"
+                            className="mr-2 px-3 py-1.5 text-sm font-sans text-[#E42423] border border-[#E42423] rounded-md hover:bg-red-50 flex items-center transition-colors duration-200"
                             onClick={() => {
                               // Find the original menu item to get its option groups
                               const originalItem = menuItems.find(mi => mi.id === item.id);
@@ -155,7 +155,7 @@ export function CartPage() {
                       
                         {/* Remove item */}
                         <button
-                          className="text-red-600 hover:text-red-800 p-2"
+                          className="text-[#E42423] hover:text-[#b31c1b] p-2 transition-colors duration-200"
                           onClick={() => removeFromCart(itemKey)}
                         >
                           <Trash2 className="h-5 w-5" />
@@ -166,7 +166,7 @@ export function CartPage() {
 
                   {/* Price */}
                   <div className="text-right">
-                    <span className="text-lg font-medium text-gray-900">
+                    <span className="text-lg font-serif text-[#E42423]">
                       ${(item.price * item.quantity).toFixed(2)}
                     </span>
                   </div>
@@ -179,18 +179,18 @@ export function CartPage() {
           {/* Order summary */}
           <div className="lg:col-span-5 mt-8 lg:mt-0">
             <div className="bg-white rounded-lg shadow-md p-6 sticky top-20">
-              <h2 className="text-lg font-medium text-gray-900 mb-4">
+              <h2 className="text-lg font-serif text-[#333] mb-4">
                 Order Summary
               </h2>
               <div className="space-y-4">
-                <div className="flex justify-between text-lg font-medium">
-                  <span>Total</span>
-                  <span>${total.toFixed(2)}</span>
+                <div className="flex justify-between text-lg">
+                  <span className="font-serif">Total</span>
+                  <span className="font-serif text-[#E42423]">${total.toFixed(2)}</span>
                 </div>
                 <button
                   className="w-full flex items-center justify-center px-6 py-3 border
-                           border-transparent text-base font-medium rounded-md text-white
-                           bg-[#c1902f] hover:bg-[#d4a43f]"
+                           border-transparent text-base font-sans font-medium rounded-md text-white
+                           bg-[#E42423] hover:bg-[#f45a59] shadow-sm hover:shadow transition-all duration-200"
                   onClick={() => navigate('/checkout')}
                 >
                   Proceed to Checkout

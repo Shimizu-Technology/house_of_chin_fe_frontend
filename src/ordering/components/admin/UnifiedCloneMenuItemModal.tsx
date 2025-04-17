@@ -311,7 +311,7 @@ export function UnifiedCloneMenuItemModal({
           <button
             type="button"
             onClick={handleClone}
-            className="inline-flex items-center px-4 py-2 bg-[#c1902f] text-white rounded-md hover:bg-[#d4a43f] transition-colors duration-200"
+            className="inline-flex items-center px-4 py-2 bg-[#E42423] text-white rounded-md hover:bg-[#f45a59] transition-colors duration-200"
             disabled={loading || 
               (cloneMode === 'same_menu' && (!newName.trim() || selectedCategories.length === 0)) ||
               (cloneMode === 'different_menu' && (!selectedMenuId || selectedCategories.length === 0))

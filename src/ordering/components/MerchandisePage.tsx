@@ -2,7 +2,7 @@ import React, { useEffect, useState, useMemo } from 'react';
 import { useMerchandiseStore } from '../store/merchandiseStore';
 import { useOrderStore } from '../store/orderStore';
 import { LoadingSpinner } from '../../shared/components/ui';
-import { ShoppingCart, Filter, X, ArrowRight } from 'lucide-react';
+import { ShoppingCart, Filter, X } from 'lucide-react';
 import toastUtils from '../../shared/utils/toastUtils';
 import FilterSidebar, { ActiveFilters } from './merchandise/FilterSidebar';
 import QuickViewModal from './merchandise/QuickViewModal';
@@ -173,7 +173,7 @@ const MerchandisePage: React.FC = () => {
                     className={`
                       whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm
                       ${selectedCollectionId === null
-                        ? 'border-[#c1902f] text-[#c1902f]'
+                        ? 'border-[#E42423] text-[#E42423]'
                         : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}
                     `}
                   >
@@ -188,7 +188,7 @@ const MerchandisePage: React.FC = () => {
                       className={`
                         whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm
                         ${selectedCollectionId === collection.id
-                          ? 'border-[#c1902f] text-[#c1902f]'
+                          ? 'border-[#E42423] text-[#E42423]'
                           : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}
                       `}
                     >
@@ -220,7 +220,7 @@ const MerchandisePage: React.FC = () => {
                 <Filter className="h-4 w-4" />
                 <span className="text-sm font-medium">{showFilters ? 'Hide Filters' : 'Show Filters'}</span>
                 {hasActiveFilters && (
-                  <span className="ml-1 bg-[#c1902f] text-white h-5 w-5 flex items-center justify-center text-xs rounded-full">
+                  <span className="ml-1 bg-[#E42423] text-white h-5 w-5 flex items-center justify-center text-xs rounded-full">
                     {activeFilters.sizes.length + 
                      activeFilters.colors.length + 
                     (activeFilters.priceRange ? 1 : 0) + 
@@ -237,7 +237,7 @@ const MerchandisePage: React.FC = () => {
                 <Filter className="h-4 w-4" />
                 <span className="text-sm font-medium">Filter</span>
                 {hasActiveFilters && (
-                  <span className="ml-1 bg-[#c1902f] text-white h-5 w-5 flex items-center justify-center text-xs rounded-full">
+                  <span className="ml-1 bg-[#E42423] text-white h-5 w-5 flex items-center justify-center text-xs rounded-full">
                     {activeFilters.sizes.length + 
                      activeFilters.colors.length + 
                     (activeFilters.priceRange ? 1 : 0) + 
@@ -249,7 +249,7 @@ const MerchandisePage: React.FC = () => {
               {hasActiveFilters && (
                 <button
                   onClick={handleClearFilters}
-                  className="flex items-center py-2 px-4 text-[#c1902f] hover:bg-[#c1902f] hover:bg-opacity-10 rounded-md transition-colors"
+                  className="flex items-center py-2 px-4 text-[#E42423] hover:bg-[#E42423] hover:bg-opacity-10 rounded-md transition-colors"
                 >
                   <X className="h-4 w-4 mr-1" />
                   <span className="text-sm font-medium">Clear</span>
@@ -323,7 +323,7 @@ const MerchandisePage: React.FC = () => {
               
               <button
                 onClick={handleClearFilters}
-                className="px-2 py-1 text-xs text-[#c1902f] hover:underline"
+                className="px-2 py-1 text-xs text-[#E42423] hover:underline"
               >
                 Clear all
               </button>
@@ -416,7 +416,7 @@ const MerchandisePage: React.FC = () => {
                     {/* Item details */}
                     <div className="p-4">
                       <h3 
-                        className="font-semibold text-lg text-gray-900 hover:text-[#c1902f] cursor-pointer"
+                        className="font-semibold text-lg text-gray-900 hover:text-[#E42423] cursor-pointer"
                         onClick={() => {
                           setSelectedItem(item);
                           setQuickViewModalOpen(true);
@@ -475,7 +475,7 @@ const MerchandisePage: React.FC = () => {
                                     className={`
                                       w-8 h-8 flex items-center justify-center text-xs border
                                       ${selectedVariant?.size === size
-                                        ? 'border-[#c1902f] bg-[#c1902f] bg-opacity-10 text-[#c1902f]'
+                                        ? 'border-[#E42423] bg-[#E42423] bg-opacity-10 text-[#E42423]'
                                         : 'border-gray-300 text-gray-700 hover:bg-gray-50'}
                                       ${!hasStock ? 'opacity-50 cursor-not-allowed line-through' : ''}
                                     `}
@@ -497,7 +497,7 @@ const MerchandisePage: React.FC = () => {
                         className={`
                           mt-4 w-full flex items-center justify-center px-4 py-2 rounded-md
                           ${!isOutOfStock
-                            ? 'bg-[#c1902f] text-white hover:bg-[#d4a43f]'
+                            ? 'bg-[#E42423] text-white hover:bg-[#f45a59]'
                             : 'bg-gray-300 text-gray-500 cursor-not-allowed'}
                           transition-colors duration-200
                         `}
@@ -558,7 +558,7 @@ const MerchandisePage: React.FC = () => {
                         </div>
                         
                         <div className="p-3">
-                          <h3 className="font-medium text-base text-gray-900 hover:text-[#c1902f] cursor-pointer">
+                          <h3 className="font-medium text-base text-gray-900 hover:text-[#E42423] cursor-pointer">
                             {item.name}
                           </h3>
                           <p className="text-gray-900 text-base mt-1 font-medium">${displayPrice.toFixed(2)}</p>
@@ -572,10 +572,10 @@ const MerchandisePage: React.FC = () => {
               <div className="mt-8 text-center">
                 <button
                   onClick={() => setSelectedCollectionId(null)}
-                  className="inline-flex items-center text-[#c1902f] font-medium hover:underline"
+                  className="inline-flex items-center text-[#E42423] font-medium hover:underline"
                 >
                   View all products
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                 </button>
               </div>
             </div>

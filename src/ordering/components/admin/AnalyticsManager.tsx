@@ -715,8 +715,8 @@ export function AnalyticsManager({ restaurantId }: AnalyticsManagerProps) {
     // Write file
     // Include time in filename if time filter is enabled
     const filename = useTimeFilter
-      ? `Hafaloha_Reports_${startDate}T${startTime}_to_${endDate}T${endTime}.xlsx`
-      : `Hafaloha_Reports_${startDate}_to_${endDate}.xlsx`;
+      ? `HouseOfChinFe_Reports_${startDate}T${startTime}_to_${endDate}T${endTime}.xlsx`
+      : `HouseOfChinFe_Reports_${startDate}_to_${endDate}.xlsx`;
     
     XLSX.writeFile(wb, filename);
   }
@@ -976,7 +976,7 @@ export function AnalyticsManager({ restaurantId }: AnalyticsManagerProps) {
           {/* "Load Analytics" button */}
           <button
             onClick={loadAnalytics}
-            className="px-4 py-2 bg-[#c1902f] text-white rounded hover:bg-[#b2872c]"
+            className="px-4 py-2 bg-[#E42423] text-white rounded hover:bg-[#b2872c]"
           >
             Load Analytics
           </button>

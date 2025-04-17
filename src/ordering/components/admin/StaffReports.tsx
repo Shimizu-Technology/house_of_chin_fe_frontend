@@ -247,7 +247,7 @@ export function StaffReports() {
         <h1 className="text-2xl font-bold text-gray-800">Staff Reports</h1>
         <button
           onClick={handleExportCSV}
-          className="px-4 py-2 bg-[#c1902f] text-white rounded-md hover:bg-[#a67b28] transition-colors"
+          className="px-4 py-2 bg-[#E42423] text-white rounded-md hover:bg-[#a67b28] transition-colors"
         >
           Export CSV
         </button>

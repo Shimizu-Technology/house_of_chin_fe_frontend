@@ -415,8 +415,8 @@ export function UserModal({ user, isCreateMode, onClose, restaurantId }: UserMod
                         type="button"
                         onClick={handleAdminResetPassword}
                         disabled={loading}
-                        className="px-4 py-2 text-sm font-medium text-white bg-[#c1902f] border border-transparent 
-                                rounded-md shadow-sm hover:bg-[#d4a43f] focus:outline-none transition-colors
+                        className="px-4 py-2 text-sm font-medium text-white bg-[#E42423] border border-transparent 
+                                rounded-md shadow-sm hover:bg-[#f45a59] focus:outline-none transition-colors
                                 disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         {loading ? 'Resetting...' : 'Reset Password'}
@@ -501,8 +501,8 @@ export function UserModal({ user, isCreateMode, onClose, restaurantId }: UserMod
                 type="button"
                 disabled={loading}
                 onClick={handleSave}
-                className="px-5 py-2.5 text-sm font-medium text-white bg-[#c1902f]
-                        rounded-md shadow-sm hover:bg-[#d4a43f] transition-all duration-200
+                className="px-5 py-2.5 text-sm font-medium text-white bg-[#E42423]
+                        rounded-md shadow-sm hover:bg-[#f45a59] transition-all duration-200
                         transform hover:scale-[1.02] active:scale-[0.98]
                         disabled:opacity-50 disabled:cursor-not-allowed"
               >

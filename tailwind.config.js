@@ -5,7 +5,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ['Pacifico', 'cursive'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['Noto Serif', 'Georgia', 'serif'],
+        display: ['Noto Serif', 'serif'],
       },
       fontSize: {
         base: '1.125rem', // ~18px

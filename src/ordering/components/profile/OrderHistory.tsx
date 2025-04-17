@@ -166,7 +166,7 @@ export function OrderHistory() {
                   className={`
                     whitespace-nowrap px-4 py-2 rounded-md text-xs font-medium min-w-[80px] flex-shrink-0
                     ${statusFilter === 'all'
-                      ? 'bg-[#c1902f] text-white shadow-sm'
+                      ? 'bg-[#E42423] text-white shadow-sm'
                       : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
                     }
                   `}
@@ -180,7 +180,7 @@ export function OrderHistory() {
                     className={`
                       whitespace-nowrap px-4 py-2 rounded-md text-xs font-medium min-w-[80px] flex-shrink-0
                       ${statusFilter === status
-                        ? 'bg-[#c1902f] text-white shadow-sm'
+                        ? 'bg-[#E42423] text-white shadow-sm'
                         : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
                       }
                     `}
@@ -308,7 +308,7 @@ export function OrderHistory() {
                     onClick={() => setCurrentPage(page)}
                     className={`w-8 h-8 flex items-center justify-center rounded-md text-sm ${
                       currentPage === page
-                        ? 'bg-[#c1902f] text-white'
+                        ? 'bg-[#E42423] text-white'
                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                     }`}
                   >

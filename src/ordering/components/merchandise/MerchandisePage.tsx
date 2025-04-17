@@ -115,7 +115,7 @@ export function MerchandisePage() {
           <SlidersHorizontal className="h-4 w-4" />
           <span>Filters</span>
           {hasActiveFilters && (
-            <span className="ml-1 bg-[#c1902f] text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+            <span className="ml-1 bg-[#E42423] text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
               {(selectedCategory !== null ? 1 : 0) + selectedSizes.size + selectedColors.size}
             </span>
           )}
@@ -177,7 +177,7 @@ export function MerchandisePage() {
                       key={size}
                       className={`px-3 py-1 text-sm border rounded-md
                         ${selectedSizes.has(size)
-                          ? 'border-[#c1902f] bg-[#c1902f]/10 text-[#c1902f]'
+                          ? 'border-[#c1902f] bg-[#E42423]/10 text-[#c1902f]'
                           : 'border-gray-300 text-gray-700 hover:border-[#c1902f]'
                         }`}
                       onClick={() => toggleSize(size)}
@@ -199,7 +199,7 @@ export function MerchandisePage() {
                       key={color}
                       className={`px-3 py-1 text-sm border rounded-md
                         ${selectedColors.has(color)
-                          ? 'border-[#c1902f] bg-[#c1902f]/10 text-[#c1902f]'
+                          ? 'border-[#c1902f] bg-[#E42423]/10 text-[#c1902f]'
                           : 'border-gray-300 text-gray-700 hover:border-[#c1902f]'
                         }`}
                       onClick={() => toggleColor(color)}
@@ -276,7 +276,7 @@ export function MerchandisePage() {
                         key={size}
                         className={`px-3 py-1 text-sm border rounded-md
                           ${selectedSizes.has(size)
-                            ? 'border-[#c1902f] bg-[#c1902f]/10 text-[#c1902f]'
+                            ? 'border-[#c1902f] bg-[#E42423]/10 text-[#c1902f]'
                             : 'border-gray-300 text-gray-700 hover:border-[#c1902f]'
                           }`}
                         onClick={() => toggleSize(size)}
@@ -298,7 +298,7 @@ export function MerchandisePage() {
                         key={color}
                         className={`px-3 py-1 text-sm border rounded-md
                           ${selectedColors.has(color)
-                            ? 'border-[#c1902f] bg-[#c1902f]/10 text-[#c1902f]'
+                            ? 'border-[#c1902f] bg-[#E42423]/10 text-[#c1902f]'
                             : 'border-gray-300 text-gray-700 hover:border-[#c1902f]'
                           }`}
                         onClick={() => toggleColor(color)}
@@ -311,7 +311,7 @@ export function MerchandisePage() {
               )}
               
               <button
-                className="w-full py-2 bg-[#c1902f] text-white rounded-md hover:bg-[#d4a43f]"
+                className="w-full py-2 bg-[#E42423] text-white rounded-md hover:bg-[#f45a59]"
                 onClick={() => setShowFilters(false)}
               >
                 Apply Filters
@@ -342,7 +342,7 @@ export function MerchandisePage() {
               <p className="text-gray-500">Try adjusting your filters</p>
               {hasActiveFilters && (
                 <button
-                  className="mt-4 px-4 py-2 bg-[#c1902f] text-white rounded-md hover:bg-[#d4a43f]"
+                  className="mt-4 px-4 py-2 bg-[#E42423] text-white rounded-md hover:bg-[#f45a59]"
                   onClick={clearFilters}
                 >
                   Clear Filters

@@ -200,7 +200,7 @@ function MenuItemsPanel({
             onClick={() => setSelectedCategory('all')}
             className={`whitespace-nowrap px-4 py-3 rounded-md text-sm font-medium
             ${selectedCategory === 'all'
-              ? 'bg-[#c1902f] text-white shadow'
+              ? 'bg-[#E42423] text-white shadow'
               : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
             }`}
           >
@@ -212,7 +212,7 @@ function MenuItemsPanel({
               onClick={() => setSelectedCategory(catId)}
               className={`whitespace-nowrap px-4 py-3 rounded-md text-sm font-medium
               ${selectedCategory === catId
-                ? 'bg-[#c1902f] text-white shadow'
+                ? 'bg-[#E42423] text-white shadow'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -377,14 +377,14 @@ function MenuItemsPanel({
                             ) : hasOptions ? (
                               <button
                                 onClick={() => setCustomizingItem(item)}
-                                className="bg-[#c1902f] text-white px-2 py-2.5 rounded text-base font-medium hover:bg-[#a97c28]"
+                                className="bg-[#E42423] text-white px-2 py-2.5 rounded text-base font-medium hover:bg-[#a97c28]"
                               >
                                 {isInCart ? 'Add Another' : 'Customize'}
                               </button>
                             ) : (
                               <button
                                 onClick={() => handleAddItem(item)}
-                                className="text-[#c1902f] hover:bg-[#c1902f] hover:text-white px-4 py-2.5 rounded text-base font-medium"
+                                className="text-[#c1902f] hover:bg-[#E42423] hover:text-white px-4 py-2.5 rounded text-base font-medium"
                               >
                                 Add
                               </button>
@@ -585,7 +585,7 @@ function OrderPanel({
                           }
                           return (
                             <div key={idx} className="flex items-center">
-                              <span className="inline-block w-2 h-2 bg-[#c1902f] rounded-full mr-1.5"></span>
+                              <span className="inline-block w-2 h-2 bg-[#E42423] rounded-full mr-1.5"></span>
                               <span className="font-medium">{optionGroupName}:</span> {optionName}
                             </div>
                           );
@@ -594,7 +594,7 @@ function OrderPanel({
                         // Object-based customizations
                         Object.entries(item.customizations).map(([groupName, options], idx: number) => (
                           <div key={idx} className="flex items-center">
-                            <span className="inline-block w-2 h-2 bg-[#c1902f] rounded-full mr-1.5"></span>
+                            <span className="inline-block w-2 h-2 bg-[#E42423] rounded-full mr-1.5"></span>
                             <span className="font-medium">{groupName}:</span>{' '}
                             {Array.isArray(options) ? options.join(', ') : String(options)}
                           </div>
@@ -690,7 +690,7 @@ function OrderPanel({
                           return false;
                         })()}
                         className="mt-1 sm:mt-0 text-[#c1902f] border border-[#c1902f]
-                                   hover:bg-[#c1902f] hover:text-white px-4 py-2
+                                   hover:bg-[#E42423] hover:text-white px-4 py-2
                                    rounded text-sm font-medium transition-colors"
                       >
                         Add Another
@@ -738,7 +738,7 @@ function OrderPanel({
           <button
             onClick={handleSubmitOrder}
             disabled={!cartItems.length || orderLoading}
-            className="py-3 bg-[#c1902f] text-white rounded-md font-medium hover:bg-[#a97c28]
+            className="py-3 bg-[#E42423] text-white rounded-md font-medium hover:bg-[#a97c28]
               focus:outline-none focus:ring-2 focus:ring-[#c1902f] focus:ring-opacity-50
               disabled:opacity-50 disabled:cursor-not-allowed shadow-sm transition-colors"
           >
@@ -1126,7 +1126,7 @@ function PaymentPanel({
               type="button"
               className={`px-3 py-2 border rounded-md text-sm font-medium transition-colors ${
                 paymentMethod === 'credit_card'
-                  ? 'bg-[#c1902f] text-white border-[#c1902f]'
+                  ? 'bg-[#E42423] text-white border-[#c1902f]'
                   : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
               }`}
               onClick={() => setPaymentMethod('credit_card')}
@@ -1137,7 +1137,7 @@ function PaymentPanel({
               type="button"
               className={`px-3 py-2 border rounded-md text-sm font-medium transition-colors ${
                 paymentMethod === 'stripe_reader'
-                  ? 'bg-[#c1902f] text-white border-[#c1902f]'
+                  ? 'bg-[#E42423] text-white border-[#c1902f]'
                   : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
               }`}
               onClick={() => setPaymentMethod('stripe_reader')}
@@ -1148,7 +1148,7 @@ function PaymentPanel({
               type="button"
               className={`px-3 py-2 border rounded-md text-sm font-medium transition-colors ${
                 paymentMethod === 'cash'
-                  ? 'bg-[#c1902f] text-white border-[#c1902f]'
+                  ? 'bg-[#E42423] text-white border-[#c1902f]'
                   : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
               }`}
               onClick={() => setPaymentMethod('cash')}
@@ -1159,7 +1159,7 @@ function PaymentPanel({
               type="button"
               className={`px-3 py-2 border rounded-md text-sm font-medium transition-colors ${
                 paymentMethod === 'payment_link'
-                  ? 'bg-[#c1902f] text-white border-[#c1902f]'
+                  ? 'bg-[#E42423] text-white border-[#c1902f]'
                   : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
               }`}
               onClick={() => setPaymentMethod('payment_link')}
@@ -1170,7 +1170,7 @@ function PaymentPanel({
               type="button"
               className={`px-3 py-2 border rounded-md text-sm font-medium transition-colors ${
                 paymentMethod === 'clover'
-                  ? 'bg-[#c1902f] text-white border-[#c1902f]'
+                  ? 'bg-[#E42423] text-white border-[#c1902f]'
                   : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
               }`}
               onClick={() => setPaymentMethod('clover')}
@@ -1181,7 +1181,7 @@ function PaymentPanel({
               type="button"
               className={`px-3 py-2 border rounded-md text-sm font-medium transition-colors ${
                 paymentMethod === 'revel'
-                  ? 'bg-[#c1902f] text-white border-[#c1902f]'
+                  ? 'bg-[#E42423] text-white border-[#c1902f]'
                   : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
               }`}
               onClick={() => setPaymentMethod('revel')}
@@ -1192,7 +1192,7 @@ function PaymentPanel({
               type="button"
               className={`px-3 py-2 border rounded-md text-sm font-medium transition-colors ${
                 paymentMethod === 'other'
-                  ? 'bg-[#c1902f] text-white border-[#c1902f]'
+                  ? 'bg-[#E42423] text-white border-[#c1902f]'
                   : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
               }`}
               onClick={() => setPaymentMethod('other')}
@@ -1262,7 +1262,7 @@ function PaymentPanel({
                       onClick={() => setCashReceived(amount.toString())}
                       className={`px-3 py-2 border rounded-md text-sm font-medium transition-colors
                         ${cashReceived === amount.toString()
-                          ? 'bg-[#c1902f] text-white border-[#c1902f]'
+                          ? 'bg-[#E42423] text-white border-[#c1902f]'
                           : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
                         }`}
                     >
@@ -1274,7 +1274,7 @@ function PaymentPanel({
                     onClick={() => setCashReceived(Math.ceil(orderTotal).toString())}
                     className={`px-3 py-2 border rounded-md text-sm font-medium transition-colors
                       ${cashReceived === Math.ceil(orderTotal).toString()
-                        ? 'bg-[#c1902f] text-white border-[#c1902f]'
+                        ? 'bg-[#E42423] text-white border-[#c1902f]'
                         : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
                       }`}
                   >
@@ -1285,7 +1285,7 @@ function PaymentPanel({
                     onClick={() => setCashReceived(orderTotal.toString())}
                     className={`px-3 py-2 border rounded-md text-sm font-medium transition-colors
                       ${cashReceived === orderTotal.toString()
-                        ? 'bg-[#c1902f] text-white border-[#c1902f]'
+                        ? 'bg-[#E42423] text-white border-[#c1902f]'
                         : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
                       }`}
                   >
@@ -1506,7 +1506,7 @@ function PaymentPanel({
                 (paymentMethod === 'payment_link' && !customerEmail && !customerPhone) ||
                 (paymentMethod === 'cash' && (parseFloat(cashReceived || '0') < orderTotal))
               }
-              className="py-3 bg-[#c1902f] text-white rounded-md font-medium hover:bg-[#a97c28]
+              className="py-3 bg-[#E42423] text-white rounded-md font-medium hover:bg-[#a97c28]
                         focus:outline-none focus:ring-2 focus:ring-[#c1902f]
                         focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed
                         shadow-sm transition-colors"
@@ -1565,7 +1565,7 @@ function PaymentPanel({
                   payment_details: paymentDetails
                 });
               }}
-              className="py-3 bg-[#c1902f] text-white rounded-md font-medium hover:bg-[#a97c28]
+              className="py-3 bg-[#E42423] text-white rounded-md font-medium hover:bg-[#a97c28]
                         focus:outline-none focus:ring-2 focus:ring-[#c1902f] focus:ring-opacity-50"
             >
               Mark as Paid &amp; Close
@@ -2215,7 +2215,7 @@ export function StaffOrderModal({ onClose, onOrderCreated }: StaffOrderModalProp
           >
             Current Order
             {cartItems.length > 0 && (
-              <span className="absolute right-4 top-1/2 -translate-y-1/2 bg-[#c1902f] text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+              <span className="absolute right-4 top-1/2 -translate-y-1/2 bg-[#E42423] text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                 {cartItems.length}
               </span>
             )}

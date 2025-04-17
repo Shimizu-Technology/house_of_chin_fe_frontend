@@ -26,8 +26,8 @@ export function MainNavigation() {
           <div className="flex">
             {/* Logo */}
             <div className="flex-shrink-0 flex items-center">
-              <Link to="/" className="text-xl font-bold text-[#c1902f]">
-                Hafaloha
+              <Link to="/" className="text-xl font-bold text-[#E42423]">
+                House of Chin Fe
               </Link>
             </div>
 
@@ -37,7 +37,7 @@ export function MainNavigation() {
                 to="/"
                 className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
                   isOrderingApp && location.pathname === '/'
-                    ? 'border-[#c1902f] text-gray-900'
+                    ? 'border-[#E42423] text-gray-900'
                     : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
                 }`}
               >
@@ -47,7 +47,7 @@ export function MainNavigation() {
                 to="/menu"
                 className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
                   location.pathname === '/menu'
-                    ? 'border-[#c1902f] text-gray-900'
+                    ? 'border-[#E42423] text-gray-900'
                     : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
                 }`}
               >
@@ -57,7 +57,7 @@ export function MainNavigation() {
                 to="/reservations"
                 className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
                   isReservationsApp && location.pathname === '/reservations'
-                    ? 'border-[#c1902f] text-gray-900'
+                    ? 'border-[#E42423] text-gray-900'
                     : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
                 }`}
               >
@@ -70,7 +70,7 @@ export function MainNavigation() {
                   to="/admin"
                   className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
                     location.pathname.startsWith('/admin')
-                      ? 'border-[#c1902f] text-gray-900'
+                      ? 'border-[#E42423] text-gray-900'
                       : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
                   }`}
                 >
@@ -84,7 +84,7 @@ export function MainNavigation() {
                   to="/staff-orders"
                   className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
                     location.pathname === '/staff-orders'
-                      ? 'border-[#c1902f] text-gray-900'
+                      ? 'border-[#E42423] text-gray-900'
                       : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
                   }`}
                 >
@@ -164,7 +164,7 @@ export function MainNavigation() {
               to="/"
               className={`block pl-3 pr-4 py-2 border-l-4 text-base font-medium ${
                 isOrderingApp && location.pathname === '/'
-                  ? 'border-[#c1902f] text-[#c1902f] bg-[#c1902f]/10'
+                  ? 'border-[#c1902f] text-[#c1902f] bg-[#E42423]/10'
                   : 'border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800'
               }`}
             >
@@ -174,7 +174,7 @@ export function MainNavigation() {
               to="/menu"
               className={`block pl-3 pr-4 py-2 border-l-4 text-base font-medium ${
                 location.pathname === '/menu'
-                  ? 'border-[#c1902f] text-[#c1902f] bg-[#c1902f]/10'
+                  ? 'border-[#c1902f] text-[#c1902f] bg-[#E42423]/10'
                   : 'border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800'
               }`}
             >
@@ -184,7 +184,7 @@ export function MainNavigation() {
               to="/reservations"
               className={`block pl-3 pr-4 py-2 border-l-4 text-base font-medium ${
                 isReservationsApp && location.pathname === '/reservations'
-                  ? 'border-[#c1902f] text-[#c1902f] bg-[#c1902f]/10'
+                  ? 'border-[#c1902f] text-[#c1902f] bg-[#E42423]/10'
                   : 'border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800'
               }`}
             >
@@ -197,7 +197,7 @@ export function MainNavigation() {
                 to="/admin"
                 className={`block pl-3 pr-4 py-2 border-l-4 text-base font-medium ${
                   location.pathname.startsWith('/admin')
-                    ? 'border-[#c1902f] text-[#c1902f] bg-[#c1902f]/10'
+                    ? 'border-[#c1902f] text-[#c1902f] bg-[#E42423]/10'
                     : 'border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800'
                 }`}
               >
@@ -214,7 +214,7 @@ export function MainNavigation() {
                 to="/staff-orders"
                 className={`block pl-3 pr-4 py-2 border-l-4 text-base font-medium ${
                   location.pathname === '/staff-orders'
-                    ? 'border-[#c1902f] text-[#c1902f] bg-[#c1902f]/10'
+                    ? 'border-[#c1902f] text-[#c1902f] bg-[#E42423]/10'
                     : 'border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800'
                 }`}
               >
@@ -230,7 +230,7 @@ export function MainNavigation() {
                 to="/cart"
                 className={`block pl-3 pr-4 py-2 border-l-4 text-base font-medium ${
                   location.pathname === '/cart'
-                    ? 'border-[#c1902f] text-[#c1902f] bg-[#c1902f]/10'
+                    ? 'border-[#c1902f] text-[#c1902f] bg-[#E42423]/10'
                     : 'border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800'
                 }`}
               >
@@ -246,7 +246,7 @@ export function MainNavigation() {
                 to="/reservations/dashboard"
                 className={`block pl-3 pr-4 py-2 border-l-4 text-base font-medium ${
                   location.pathname.includes('/reservations/dashboard')
-                    ? 'border-[#c1902f] text-[#c1902f] bg-[#c1902f]/10'
+                    ? 'border-[#c1902f] text-[#c1902f] bg-[#E42423]/10'
                     : 'border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800'
                 }`}
               >

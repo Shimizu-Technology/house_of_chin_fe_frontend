@@ -128,8 +128,8 @@ export function MerchandiseItem({ item }: MerchandiseItemProps) {
                 ${isOutOfStock
                   ? 'bg-gray-400 cursor-not-allowed'
                   : hasVariants
-                    ? 'bg-[#c1902f] hover:bg-[#d4a43f]'
-                    : 'bg-[#c1902f] hover:bg-[#d4a43f]'
+                    ? 'bg-[#E42423] hover:bg-[#f45a59]'
+                    : 'bg-[#E42423] hover:bg-[#f45a59]'
                 }`}
               onClick={handleQuickAdd}
               disabled={isOutOfStock}

@@ -3429,7 +3429,7 @@ toastUtils.error('Network issue when verifying inventory. Please try again or ch
               className={`w-full sm:w-auto px-4 py-3 sm:py-2.5 ${
                 isProcessingPayment
                   ? 'bg-gray-400 cursor-not-allowed'
-                  : 'bg-[#c1902f] hover:bg-[#d4a43f]'
+                  : 'bg-[#E42423] hover:bg-[#f45a59]'
               } text-white rounded-lg text-sm font-medium transition-colors shadow-sm
                 order-1 sm:order-2`}
             >

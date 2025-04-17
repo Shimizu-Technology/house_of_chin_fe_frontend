@@ -149,7 +149,7 @@ const QuickViewModal: React.FC<QuickViewModalProps> = ({
                     onClick={() => setCurrentImageIndex(index)}
                     className={`h-2 w-2 rounded-full ${
                       currentImageIndex === index 
-                        ? 'bg-[#c1902f]' 
+                        ? 'bg-[#E42423]' 
                         : 'bg-gray-300 hover:bg-gray-400'
                     }`}
                   />
@@ -273,7 +273,7 @@ const QuickViewModal: React.FC<QuickViewModalProps> = ({
                             className={`
                               h-10 w-12 flex items-center justify-center border text-sm font-medium
                               ${selectedSize === size
-                                ? 'border-[#c1902f] bg-[#c1902f] bg-opacity-10 text-[#c1902f]'
+                                ? 'border-[#c1902f] bg-[#E42423] bg-opacity-10 text-[#c1902f]'
                                 : 'border-gray-300 text-gray-700 hover:bg-gray-50'}
                               ${!hasInStockVariant ? 'opacity-50 cursor-not-allowed line-through' : ''}
                             `}
@@ -403,7 +403,7 @@ const QuickViewModal: React.FC<QuickViewModalProps> = ({
                 className={`
                   w-full flex items-center justify-center px-4 py-3 rounded-md border
                   ${!isOutOfStock
-                    ? 'border-[#c1902f] bg-white text-[#c1902f] hover:bg-[#c1902f] hover:bg-opacity-10'
+                    ? 'border-[#c1902f] bg-white text-[#c1902f] hover:bg-[#E42423] hover:bg-opacity-10'
                     : 'border-gray-300 bg-gray-100 text-gray-500 cursor-not-allowed'}
                   transition-colors duration-200
                 `}
@@ -418,7 +418,7 @@ const QuickViewModal: React.FC<QuickViewModalProps> = ({
                 className={`
                   w-full flex items-center justify-center px-4 py-3 rounded-md
                   ${!isOutOfStock
-                    ? 'bg-[#c1902f] text-white hover:bg-[#d4a43f]'
+                    ? 'bg-[#E42423] text-white hover:bg-[#f45a59]'
                     : 'bg-gray-300 text-gray-500 cursor-not-allowed'}
                   transition-colors duration-200
                 `}
@@ -436,9 +436,9 @@ const QuickViewModal: React.FC<QuickViewModalProps> = ({
                   </svg>
                 </div>
                 <div className="ml-3">
-                  <p className="text-sm font-medium text-gray-900">Pickup available at Hafaloha (Tamuning)</p>
+                  <p className="text-sm font-medium text-gray-900">Pickup available at House of Chin Fe (Hagåtña)</p>
                   <p className="mt-1 text-xs text-gray-500">Usually ready in 2 hours</p>
-                  <button className="mt-1 text-xs text-[#c1902f] hover:text-[#d4a43f] underline">
+                  <button className="mt-1 text-xs text-[#E42423] hover:text-[#f45a59] underline">
                     View store information
                   </button>
                 </div>

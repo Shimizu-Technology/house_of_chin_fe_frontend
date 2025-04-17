@@ -220,7 +220,7 @@ export function UsersSettings({ restaurantId }: UsersSettingsProps) {
         {/* Create User Button - full width on mobile */}
         <button
           onClick={handleCreateNewUser}
-          className="w-full sm:w-auto px-4 py-2 bg-[#c1902f] text-white rounded-md hover:bg-[#d4a43f]
+          className="w-full sm:w-auto px-4 py-2 bg-[#E42423] text-white rounded-md hover:bg-[#f45a59]
                      text-sm transition-all duration-200 transform hover:scale-[1.02] active:scale-[0.98]"
         >
           + Create New User

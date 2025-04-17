@@ -68,7 +68,7 @@ const LazyMenuItemImage = memo(function LazyMenuItemImage({
         />
       )}
       {featured && (
-        <div className="absolute top-2 right-2 bg-amber-100 text-amber-800 text-xs font-medium rounded-md px-2 py-0.5 shadow-sm">
+        <div className="bg-red-50 text-[#E42423] text-xs font-medium rounded-md px-2 py-0.5 mr-2 mb-2">
           Featured
         </div>
       )}
@@ -199,10 +199,8 @@ export const MenuItem = memo(function MenuItem({ item, index = 0, layout = 'gall
         <div
           className={`bg-white rounded-lg shadow-sm hover:shadow-md overflow-hidden flex flex-col min-h-[380px] animate-fadeIn
             border border-gray-100 hover:border-gray-200 transition-all duration-300
-            ${isOutOfStock || hasUnavailableRequiredOptions ? 'opacity-70' : ''}
-            ${isOutOfStock || hasUnavailableRequiredOptions ? 'cursor-not-allowed' : 'cursor-pointer'}`
+            ${isOutOfStock || hasUnavailableRequiredOptions ? 'opacity-70' : ''}`
           }
-          onClick={isOutOfStock || hasUnavailableRequiredOptions ? undefined : handleOpenCustomization}
         >
           <LazyMenuItemImage 
             image={item.image}
@@ -214,7 +212,7 @@ export const MenuItem = memo(function MenuItem({ item, index = 0, layout = 'gall
 
           <div className="p-5 flex flex-col flex-1">
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 group-hover:text-[#c1902f] transition-colors">{item.name}</h3>
+              <h3 className="text-lg font-semibold text-gray-900 group-hover:text-[#E42423] transition-colors">{item.name}</h3>
               <p className="mt-1 text-sm text-gray-600 line-clamp-2">{item.description}</p>
 
               {/* Badges and notices */}
@@ -281,7 +279,7 @@ export const MenuItem = memo(function MenuItem({ item, index = 0, layout = 'gall
             </div>
 
             <div className="mt-auto pt-4 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-              <span className="text-lg font-semibold text-[#c1902f]">
+              <span className="text-lg font-semibold text-[#E42423]">
                 ${item.price.toFixed(2)}
               </span>
               {hasCustomizations ? (
@@ -291,8 +289,8 @@ export const MenuItem = memo(function MenuItem({ item, index = 0, layout = 'gall
                     handleOpenCustomization();
                   }}
                   className="w-full md:w-auto inline-flex items-center justify-center px-4 py-2 border border-transparent
-                             text-sm font-medium rounded-md shadow-sm text-white bg-[#c1902f] hover:bg-[#d4a43f]
-                             focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#c1902f]
+                             text-sm font-medium rounded-md shadow-sm text-white bg-[#E42423] hover:bg-[#f45a59]
+                             focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#E42423]
                              transform hover:-translate-y-0.5 transition-all duration-200"
                   disabled={isOutOfStock || hasUnavailableRequiredOptions}
                 >
@@ -308,7 +306,7 @@ export const MenuItem = memo(function MenuItem({ item, index = 0, layout = 'gall
                     transition-transform
                     ${isOutOfStock || hasUnavailableRequiredOptions
                         ? 'bg-gray-300 cursor-not-allowed'
-                        : 'bg-[#c1902f] hover:bg-[#d4a43f]'
+                        : 'bg-[#E42423] hover:bg-[#f45a59]'
                     }
                     ${buttonClicked ? 'animate-bounce' : ''}
                   `}
@@ -401,11 +399,14 @@ export const MenuItem = memo(function MenuItem({ item, index = 0, layout = 'gall
                 <button
                   onClick={handleOpenCustomization}
                   disabled={isOutOfStock || hasUnavailableRequiredOptions}
-                  className={`px-3 py-1.5 rounded-full text-sm font-medium text-white
-                    ${isOutOfStock || hasUnavailableRequiredOptions ? 'bg-gray-400' : 'bg-[#c1902f] hover:bg-[#d4a43f]'}
-                    transition-all duration-200 ease-in-out
-                    ${buttonClicked ? 'animate-pulse' : ''}
+                  className={`
+                    flex-1 flex items-center justify-center px-4 py-2 rounded-md
+                    ${isOutOfStock || hasUnavailableRequiredOptions ? 'bg-gray-400' : 'bg-[#E42423] hover:bg-[#f45a59]'}
+                    text-white font-medium
+                    transition-colors duration-200 ease-in-out shadow-sm hover:shadow
+                    ${isOutOfStock || hasUnavailableRequiredOptions ? 'cursor-not-allowed' : ''}
                   `}
+                  aria-label="Customize item"
                 >
                   <span className="flex items-center">
                     <Plus className="h-4 w-4 mr-1.5" />
@@ -416,11 +417,15 @@ export const MenuItem = memo(function MenuItem({ item, index = 0, layout = 'gall
                 <button
                   onClick={handleQuickAdd}
                   disabled={isOutOfStock || hasUnavailableRequiredOptions}
-                  className={`px-3 py-1.5 rounded-full text-sm font-medium text-white
-                    ${isOutOfStock || hasUnavailableRequiredOptions ? 'bg-gray-400' : 'bg-[#c1902f] hover:bg-[#d4a43f]'}
-                    transition-all duration-200 ease-in-out
+                  className={`
+                    flex-1 flex items-center justify-center px-4 py-2 rounded-md
+                    ${isOutOfStock || hasUnavailableRequiredOptions ? 'bg-gray-400' : 'bg-[#E42423] hover:bg-[#f45a59]'}
+                    text-white font-medium
+                    transition-colors duration-200 ease-in-out shadow-sm hover:shadow
                     ${buttonClicked ? 'animate-pulse' : ''}
+                    ${isOutOfStock || hasUnavailableRequiredOptions ? 'cursor-not-allowed' : ''}
                   `}
+                  aria-label="Add to cart"
                 >
                   <span className="flex items-center">
                     <Plus className="h-4 w-4 mr-1.5" />

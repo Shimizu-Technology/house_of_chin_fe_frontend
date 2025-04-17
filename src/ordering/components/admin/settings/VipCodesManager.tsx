@@ -764,7 +764,7 @@ export const VipCodesManager: React.FC = () => {
               <label className="inline-flex items-center">
                 <input
                   type="radio"
-                  className="form-radio text-amber-600"
+                  className="form-radio text-[#E42423]"
                   checked={codeType === 'individual'}
                   onChange={() => setCodeType('individual')}
                 />
@@ -773,7 +773,7 @@ export const VipCodesManager: React.FC = () => {
               <label className="inline-flex items-center">
                 <input
                   type="radio"
-                  className="form-radio text-amber-600"
+                  className="form-radio text-[#E42423]"
                   checked={codeType === 'group'}
                   onChange={() => setCodeType('group')}
                 />
@@ -785,7 +785,7 @@ export const VipCodesManager: React.FC = () => {
                   id="limitedUses"
                   checked={formData.limitedUses}
                   onChange={() => setFormData(prev => ({ ...prev, limitedUses: !prev.limitedUses }))}
-                  className="mr-2 h-4 w-4 text-amber-600 focus:ring-amber-500 border-gray-300 rounded"
+                  className="mr-2 h-4 w-4 text-[#E42423] focus:ring-[#E42423] border-gray-300 rounded"
                 />
                 <label htmlFor="limitedUses" className="text-sm font-medium text-gray-700">
                   Limited Uses
@@ -807,7 +807,7 @@ export const VipCodesManager: React.FC = () => {
                   max="100"
                   value={formData.count}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E42423]"
                 />
               </div>
             )}
@@ -852,7 +852,7 @@ export const VipCodesManager: React.FC = () => {
                   value={formData.maxUses}
                   onChange={handleInputChange}
                   placeholder="Enter number of uses"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E42423]"
                 />
               </div>
             )}
@@ -915,7 +915,7 @@ export const VipCodesManager: React.FC = () => {
           {/* Bulk actions */}
           {selectedCodes.length > 0 && (
             <div className="flex items-center gap-2 bg-amber-50 p-2 rounded-md">
-              <span className="text-sm font-medium text-amber-800">
+              <span className="text-sm font-medium text-[#b31c1b]">
                 {selectedCodes.length} code(s) selected
               </span>
               <div className="flex gap-2 flex-wrap">
@@ -949,7 +949,7 @@ export const VipCodesManager: React.FC = () => {
                 </button>
                 <button
                   onClick={() => setSelectedCodes([])}
-                  className="px-3 py-1 bg-white border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-amber-500 text-sm font-medium"
+                  className="px-3 py-1 bg-white border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#E42423] text-sm font-medium"
                 >
                   Cancel
                 </button>
@@ -963,7 +963,7 @@ export const VipCodesManager: React.FC = () => {
               placeholder="Search by name or code..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500 pl-10"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E42423] pl-10"
             />
             <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -978,7 +978,7 @@ export const VipCodesManager: React.FC = () => {
             <select
               value={sortField}
               onChange={(e) => setSortField(e.target.value as any)}
-              className="px-2 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500"
+              className="px-2 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E42423]"
             >
               <option value="created_at">Date Created</option>
               <option value="name">Name</option>
@@ -1008,7 +1008,7 @@ export const VipCodesManager: React.FC = () => {
             filteredAndSortedCodes.map((code: VipAccessCode) => (
               <div 
                 key={code.id} 
-                className={`bg-white border rounded-lg p-4 shadow-sm ${selectedCodes.includes(code.id) ? 'border-amber-500' : 'border-gray-200'}`}
+                className={`bg-white border rounded-lg p-4 shadow-sm ${selectedCodes.includes(code.id) ? 'border-[#E42423]' : 'border-gray-200'}`}
               >
                 <div className="flex justify-between items-start mb-2">
                   <div className="flex-1">
@@ -1017,7 +1017,7 @@ export const VipCodesManager: React.FC = () => {
                         type="checkbox"
                         checked={selectedCodes.includes(code.id)}
                         onChange={() => handleSelectCode(code.id)}
-                        className="h-4 w-4 text-amber-600 focus:ring-amber-500 border-gray-300 rounded mr-2"
+                        className="h-4 w-4 text-[#E42423] focus:ring-[#E42423] border-gray-300 rounded mr-2"
                       />
                       <h3 className="font-medium text-gray-900 truncate">{code.name}</h3>
                     </div>
@@ -1058,7 +1058,7 @@ export const VipCodesManager: React.FC = () => {
                 <div className="flex justify-end gap-2">
                   <button
                     onClick={() => setViewingUsageForCode(code.id)}
-                    className="p-2 rounded-full bg-amber-50 text-amber-500 hover:bg-amber-100 hover:text-amber-700 transition-colors"
+                    className="p-2 rounded-full bg-red-50 text-[#E42423] hover:bg-red-100 hover:text-[#b31c1b] transition-colors"
                     title="View Usage"
                     aria-label="View Usage"
                   >
@@ -1149,7 +1149,7 @@ export const VipCodesManager: React.FC = () => {
                       type="checkbox"
                       checked={selectedCodes.length === filteredAndSortedCodes.length && filteredAndSortedCodes.length > 0}
                       onChange={handleSelectAll}
-                      className="h-4 w-4 text-amber-600 focus:ring-amber-500 border-gray-300 rounded"
+                      className="h-4 w-4 text-[#E42423] focus:ring-[#E42423] border-gray-300 rounded"
                     />
                   </div>
                 </th>
@@ -1172,7 +1172,7 @@ export const VipCodesManager: React.FC = () => {
                           type="checkbox"
                           checked={selectedCodes.includes(code.id)}
                           onChange={() => handleSelectCode(code.id)}
-                          className="h-4 w-4 text-amber-600 focus:ring-amber-500 border-gray-300 rounded"
+                          className="h-4 w-4 text-[#E42423] focus:ring-[#E42423] border-gray-300 rounded"
                         />
                       </div>
                     </td>
@@ -1221,7 +1221,7 @@ export const VipCodesManager: React.FC = () => {
                                 dropdown.classList.toggle('hidden');
                               }
                             }}
-                            className="p-2 rounded-full bg-amber-50 text-amber-600 hover:bg-amber-100"
+                            className="p-2 rounded-full bg-red-50 text-[#E42423] hover:bg-red-100"
                             title="Actions"
                           >
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -1296,7 +1296,7 @@ export const VipCodesManager: React.FC = () => {
                         <div className="hidden sm:flex sm:flex-row sm:items-center sm:justify-center sm:gap-1 md:gap-2">
                           <button
                             onClick={() => setViewingUsageForCode(code.id)}
-                            className="p-1 sm:p-1.5 rounded-full bg-amber-50 text-amber-500 hover:bg-amber-100 hover:text-amber-700 transition-colors"
+                            className="p-1 sm:p-1.5 rounded-full bg-red-50 text-[#E42423] hover:bg-red-100 hover:text-[#b31c1b] transition-colors"
                             title="View Usage"
                             aria-label="View Usage"
                           >
@@ -1429,7 +1429,7 @@ export const VipCodesManager: React.FC = () => {
                   name="name"
                   value={editFormData.name}
                   onChange={handleEditInputChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E42423]"
                 />
               </div>
               
@@ -1440,7 +1440,7 @@ export const VipCodesManager: React.FC = () => {
                   name="limitedUses"
                   checked={editFormData.limitedUses}
                   onChange={handleEditInputChange}
-                  className="mr-2 h-4 w-4 text-amber-600 focus:ring-amber-500 border-gray-300 rounded"
+                  className="mr-2 h-4 w-4 text-[#E42423] focus:ring-[#E42423] border-gray-300 rounded"
                 />
                 <label htmlFor="editLimitedUses" className="text-sm font-medium text-gray-700">
                   Limited Uses
@@ -1459,7 +1459,7 @@ export const VipCodesManager: React.FC = () => {
                     value={editFormData.maxUses}
                     onChange={handleEditInputChange}
                     placeholder="Enter number of uses"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E42423]"
                   />
                 </div>
               )}
@@ -1472,7 +1472,7 @@ export const VipCodesManager: React.FC = () => {
                     name="isActive"
                     checked={editFormData.isActive}
                     onChange={handleEditInputChange}
-                    className="mr-2 h-4 w-4 text-amber-600 focus:ring-amber-500 border-gray-300 rounded"
+                    className="mr-2 h-4 w-4 text-[#E42423] focus:ring-[#E42423] border-gray-300 rounded"
                   />
                   <label htmlFor="editIsActive" className="text-sm font-medium text-gray-700">
                     Active
@@ -1483,7 +1483,7 @@ export const VipCodesManager: React.FC = () => {
               <div className="flex justify-end space-x-2 mt-6">
                 <button
                   onClick={handleCancelEdit}
-                  className="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                  className="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#E42423]"
                 >
                   Cancel
                 </button>

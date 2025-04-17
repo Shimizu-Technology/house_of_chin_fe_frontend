@@ -39,7 +39,7 @@ export const ListView: React.FC<ListViewProps> = ({
       {loading ? (
         // Show loading spinner while menu items are loading
         <div className="flex justify-center items-center py-12">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#c1902f]"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#E42423]"></div>
         </div>
       ) : (
         <div className="animate-fadeIn transition-opacity duration-300">
@@ -103,7 +103,7 @@ const ListViewItem: React.FC<{ item: MenuItem }> = ({ item }) => {
     !item.image || 
     item.image.includes('default-placeholder') || 
     item.image.includes('placeholder') || 
-    item.image.includes('hafaloha.png') || 
+    item.image.includes('house-of-chin-fe.png') || 
     item.image.includes('default.') || 
     item.image.includes('no-image')
   );
@@ -161,7 +161,7 @@ const ListViewItem: React.FC<{ item: MenuItem }> = ({ item }) => {
 
   // Get primary color based on restaurant
   const getPrimaryColor = () => {
-    return restaurant?.id === 2 ? '#0078d4' : '#c1902f';
+    return restaurant?.id === 2 ? '#0078d4' : '#E42423';
   };
   
   // Get category icon based on category ID or name
@@ -298,41 +298,41 @@ const ListViewItem: React.FC<{ item: MenuItem }> = ({ item }) => {
               <div className="flex flex-nowrap sm:flex-wrap gap-1.5 mb-2 mt-2 overflow-x-auto pb-1 hide-scrollbar">
                 {/* Special notices like 24 hours */}
                 {item.advance_notice_hours && item.advance_notice_hours > 0 ? (
-                  <span className="inline-flex flex-shrink-0 items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">
+                  <span className="inline-flex flex-shrink-0 items-center px-2 py-0.5 rounded text-xs font-medium bg-red-50 text-[#E42423]">
                     {item.advance_notice_hours}h notice
                   </span>
                 ) : null}
                 
                 {/* Featured badge */}
                 {item.featured ? (
-                  <span className="inline-flex flex-shrink-0 items-center px-2 py-0.5 rounded text-xs font-medium bg-amber-100 text-amber-800">
+                  <span className="inline-flex flex-shrink-0 items-center px-2 py-0.5 rounded text-xs font-medium bg-red-50 text-[#E42423]">
                     Featured
                   </span>
                 ) : null}
                 
                 {/* Seasonal badge */}
                 {item.seasonal ? (
-                  <span className="inline-flex flex-shrink-0 items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800">
+                  <span className="inline-flex flex-shrink-0 items-center px-2 py-0.5 rounded text-xs font-medium bg-red-50 text-[#b31c1b]">
                     {specialLabel || 'Seasonal'}
                   </span>
                 ) : null}
                 
                 {/* Stock status badges */}
                 {isLowStock ? (
-                  <span className="inline-flex flex-shrink-0 items-center px-2 py-0.5 rounded text-xs font-medium bg-orange-100 text-orange-800">
+                  <span className="inline-flex flex-shrink-0 items-center px-2 py-0.5 rounded text-xs font-medium bg-red-50 text-[#f45a59]">
                     Only {availableQuantity} left
                   </span>
                 ) : null}
                 
                 {isOutOfStock ? (
-                  <span className="inline-flex flex-shrink-0 items-center px-2 py-0.5 rounded text-xs font-medium bg-red-100 text-red-800">
+                  <span className="inline-flex flex-shrink-0 items-center px-2 py-0.5 rounded text-xs font-medium bg-red-50 text-[#b31c1b]">
                     Out of Stock
                   </span>
                 ) : null}
                 
                 {/* Available days badge */}
                 {formattedDays ? (
-                  <span className="inline-flex flex-shrink-0 items-center px-2 py-0.5 rounded text-xs font-medium bg-purple-100 text-purple-800">
+                  <span className="inline-flex flex-shrink-0 items-center px-2 py-0.5 rounded text-xs font-medium bg-red-50 text-[#E42423]">
                     {formattedDays}
                   </span>
                 ) : null}
@@ -364,7 +364,7 @@ const ListViewItem: React.FC<{ item: MenuItem }> = ({ item }) => {
               }}
               className={`
                 flex items-center justify-center px-2 py-1 sm:px-3 sm:py-1.5 rounded-md
-                ${isOutOfStock || hasUnavailableRequiredOptions ? 'bg-gray-400' : 'bg-[#c1902f] hover:bg-[#d4a43f]'}
+                ${isOutOfStock || hasUnavailableRequiredOptions ? 'bg-gray-400' : 'bg-[#E42423] hover:bg-[#f45a59]'}
                 text-white
                 transition-all duration-200 ease-in-out
                 text-xs font-medium shadow-sm hover:shadow

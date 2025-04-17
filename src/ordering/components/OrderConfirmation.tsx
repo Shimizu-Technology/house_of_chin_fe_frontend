@@ -73,8 +73,8 @@ export function OrderConfirmation() {
           <Link
             to="/menu"
             className="inline-flex items-center px-6 py-3 border border-transparent
-                       text-base font-medium rounded-md text-white bg-[#c1902f]
-                       hover:bg-[#d4a43f]"
+                       text-base font-medium rounded-md text-white bg-[#E42423]
+                       hover:bg-[#f45a59]"
           >
             Order More
           </Link>

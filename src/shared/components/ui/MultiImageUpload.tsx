@@ -199,7 +199,7 @@ const MultiImageUpload: React.FC<MultiImageUploadProps> = ({
             className={`
               relative rounded-md overflow-hidden border-2 aspect-square
               ${draggedImageId === image.id ? 'opacity-50 border-dashed border-gray-400' : ''}
-              ${dragOverImageId === image.id ? 'border-[#c1902f]' : 'border-gray-200'}
+              ${dragOverImageId === image.id ? 'border-[#E42423]' : 'border-gray-200'}
               transition-all cursor-move
             `}
           >

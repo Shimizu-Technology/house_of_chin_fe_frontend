@@ -243,7 +243,7 @@ export function MenusSettings({ restaurantId }: MenusSettingsProps) {
         />
         <button
           onClick={handleOpenCreateModal}
-          className="inline-flex items-center px-3 py-2 bg-[#c1902f] text-white rounded-md hover:bg-[#d4a43f] w-auto"
+          className="inline-flex items-center px-3 py-2 bg-[#E42423] text-white rounded-md hover:bg-[#f45a59] w-auto"
           disabled={loading}
         >
           <Plus className="h-4 w-4 mr-1" />
@@ -320,7 +320,7 @@ export function MenusSettings({ restaurantId }: MenusSettingsProps) {
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="h-6 flex items-center">
                         {menu.id === effectiveCurrentMenuId ? (
-                          <span className="px-2 py-1 text-xs rounded-full bg-green-100 text-green-800">
+                          <span className="px-2 py-1 text-xs rounded-full bg-[#fef2f2] text-[#E42423]">
                             Active
                           </span>
                         ) : (
@@ -342,7 +342,7 @@ export function MenusSettings({ restaurantId }: MenusSettingsProps) {
                           <Tooltip content="Set as Active Menu">
                             <button
                               onClick={() => handleSetActiveMenu(menu.id)}
-                              className="text-blue-600 hover:text-blue-900 transition-colors duration-200"
+                              className="text-[#E42423] hover:text-[#f45a59] transition-colors duration-200"
                               disabled={loading}
                             >
                               <Check className="h-5 w-5" />
@@ -354,7 +354,7 @@ export function MenusSettings({ restaurantId }: MenusSettingsProps) {
                         <Tooltip content="Edit Menu">
                           <button
                             onClick={() => handleOpenEditModal(menu)}
-                            className="text-indigo-600 hover:text-indigo-900 transition-colors duration-200"
+                            className="text-[#E42423] hover:text-[#f45a59] transition-colors duration-200"
                             disabled={loading}
                           >
                             <Edit2 className="h-5 w-5" />
@@ -376,7 +376,7 @@ export function MenusSettings({ restaurantId }: MenusSettingsProps) {
                         <Tooltip content="Clone Menu">
                           <button
                             onClick={() => handleCloneMenu(menu.id)}
-                            className="text-orange-600 hover:text-orange-900 transition-colors duration-200"
+                            className="text-gray-500 hover:text-[#E42423] transition-colors duration-200"
                             disabled={loading}
                           >
                             <Copy className="h-5 w-5" />
@@ -462,7 +462,7 @@ export function MenusSettings({ restaurantId }: MenusSettingsProps) {
                   <div className="flex space-x-4">
                     <button
                       onClick={() => handleOpenEditModal(menu)}
-                      className="text-indigo-600 transition-colors duration-200"
+                      className="text-[#E42423] transition-colors duration-200"
                       disabled={loading}
                       aria-label="Edit Menu"
                     >
@@ -480,7 +480,7 @@ export function MenusSettings({ restaurantId }: MenusSettingsProps) {
 
                     <button
                       onClick={() => handleCloneMenu(menu.id)}
-                      className="text-orange-600 transition-colors duration-200"
+                      className="text-gray-500 hover:text-[#E42423] transition-colors duration-200"
                       disabled={loading}
                       aria-label="Clone Menu"
                     >
@@ -545,14 +545,14 @@ export function MenusSettings({ restaurantId }: MenusSettingsProps) {
               <button
                 type="button"
                 onClick={() => setIsModalOpen(false)}
-                className="px-4 py-2 border rounded-md hover:bg-gray-50 transition-colors duration-200"
+                className="px-3 py-2 bg-[#E42423] text-white rounded-md hover:bg-[#f45a59]"
               >
                 Cancel
               </button>
               <button
                 type="button"
                 onClick={handleSaveMenu}
-                className="inline-flex items-center px-4 py-2 bg-[#c1902f] text-white rounded-md hover:bg-[#d4a43f] transition-colors duration-200"
+                className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-[#E42423] hover:bg-[#f45a59] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#E42423]"
                 disabled={loading}
               >
                 <Save className="h-5 w-5 mr-2" />

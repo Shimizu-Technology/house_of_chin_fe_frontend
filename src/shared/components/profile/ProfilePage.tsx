@@ -173,10 +173,10 @@ export function ProfilePage() {
               disabled={saveLoading}
               className={`
                 inline-flex items-center px-6 py-3 text-lg
-                bg-[#c1902f] text-white font-medium
-                rounded-md hover:bg-[#d4a43f]
+                bg-[#E42423] text-white font-medium
+                rounded-md hover:bg-[#f45a59]
                 focus:outline-none focus:ring-2 focus:ring-offset-2
-                focus:ring-[#c1902f] transition-all
+                focus:ring-[#E42423] transition-all
                 ${saveLoading ? 'opacity-70 cursor-not-allowed' : 'active:scale-95'}
               `}
             >
