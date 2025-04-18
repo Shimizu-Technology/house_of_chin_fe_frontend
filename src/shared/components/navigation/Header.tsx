@@ -382,15 +382,12 @@ export function Header() {
       {/* Mobile Menu - Slide-in drawer */}
       <div 
         ref={mobileMenuRef} 
-        className={`fixed inset-0 z-40 transform transition-transform duration-300 ease-in-out lg:hidden
+        className={`fixed inset-y-0 left-0 w-80 z-50 transform transition-transform duration-300 ease-in-out lg:hidden
         ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}
       `}>
-        {/* Backdrop overlay */}
-        <div 
-          className={`absolute inset-0 bg-black transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-50' : 'opacity-0'}`} 
-          onClick={() => setIsMobileMenuOpen(false)}
-        ></div>
-        <div className="p-4 border-b border-gray-100 flex justify-between items-center">
+        {/* Solid white background for the menu */}
+        <div className="absolute inset-0 bg-white shadow-xl"></div>
+        <div className="p-4 border-b border-gray-100 flex justify-between items-center relative z-10">
           <Link 
             to="/" 
             className="text-xl font-bold text-[#E42423]"
@@ -408,13 +405,13 @@ export function Header() {
           </button>
         </div>
         
-        <div className="p-4 space-y-4">
+        <div className="p-4 space-y-4 relative z-10 bg-white">
           {/* Navigation Links */}
           <div className="space-y-2">
-            <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Navigation</h3>
+            <h3 className="text-xs font-semibold text-gray-600 uppercase tracking-wider font-sans">Navigation</h3>
             <Link
               to="/menu"
-              className={`block px-3 py-2 rounded-md text-base font-medium text-gray-700
+              className={`block px-3 py-2 rounded-md text-base font-medium text-gray-700 font-sans
                          hover:text-[#E42423] hover:bg-gray-50 transition-colors duration-150
                          ${isActiveLink('/menu')}`}
               onClick={() => setIsMobileMenuOpen(false)}
@@ -447,14 +444,14 @@ export function Header() {
           
           {/* Restaurant Info */}
           <div className="space-y-2 pt-2 border-t border-gray-100">
-            <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Restaurant Info</h3>
+            <h3 className="text-xs font-semibold text-gray-600 uppercase tracking-wider font-sans">Restaurant Info</h3>
             <div className="px-3 py-2 text-base text-gray-700 flex items-center">
               <Clock className="inline-block h-4 w-4 mr-3 text-[#E42423]" />
-              11AM-9PM
+              <span className="font-sans">6:30AM-9PM</span>
             </div>
             <div className="px-3 py-2 text-base text-gray-700 flex items-center">
               <MapPin className="inline-block h-4 w-4 mr-3 text-[#E42423]" />
-              {restaurant?.address ? restaurant.address.split(',')[0] : 'Tamuning'}
+              <span className="font-sans">{restaurant?.address ? restaurant.address.split(',')[0] : 'Tamuning'}</span>
             </div>
             {restaurant?.phone_number ? (
               <a
@@ -464,7 +461,7 @@ export function Header() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <Phone className="inline-block h-4 w-4 mr-3 text-[#E42423]" />
-                {formatPhoneNumber(restaurant.phone_number)}
+                <span className="font-sans">{formatPhoneNumber(restaurant.phone_number)}</span>
               </a>
             ) : (
               <a
@@ -474,14 +471,14 @@ export function Header() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <Phone className="inline-block h-4 w-4 mr-3 text-[#E42423]" />
-                (671) 989-3444
+                <span className="font-sans">(671) 472-6135</span>
               </a>
             )}
           </div>
 
           {/* User Account */}
           <div className="space-y-2 pt-2 border-t border-gray-100">
-            <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+            <h3 className="text-xs font-semibold text-gray-600 uppercase tracking-wider font-sans">
               {user ? 'Your Account' : 'Account'}
             </h3>
             
@@ -493,7 +490,7 @@ export function Header() {
                     {isAdminOrAbove && (
                       <Link
                         to="/reservations/dashboard"
-                        className="block px-3 py-2 rounded-md text-base font-medium text-gray-700
+                        className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 font-sans
                                  hover:text-[#E42423] hover:bg-gray-50 transition-colors duration-150"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
@@ -504,7 +501,7 @@ export function Header() {
                     {/* Admin Dashboard - visible to all admin roles */}
                     <Link
                       to="/admin"
-                      className="block px-3 py-2 rounded-md text-base font-medium text-gray-700
+                      className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 font-sans
                                hover:text-[#E42423] hover:bg-gray-50 transition-colors duration-150"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
@@ -517,16 +514,16 @@ export function Header() {
 
                 <Link
                   to="/orders"
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700
-                           hover:text-[#E42423] hover:bg-gray-50 transition-colors duration-150"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 font-sans
+                            hover:text-[#E42423] hover:bg-gray-50 transition-colors duration-150"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Order History
                 </Link>
                 <Link
                   to="/profile"
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700
-                           hover:text-[#E42423] hover:bg-gray-50 transition-colors duration-150"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 font-sans
+                            hover:text-[#E42423] hover:bg-gray-50 transition-colors duration-150"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   My Profile
@@ -538,8 +535,8 @@ export function Header() {
                     toastUtils.success('Signed out successfully!');
                     setIsMobileMenuOpen(false);
                   }}
-                  className="block w-full text-left px-3 py-2 rounded-md text-base font-medium
-                           text-gray-700 hover:text-[#E42423] hover:bg-gray-50 transition-colors duration-150"
+                  className="block w-full text-left px-3 py-2 rounded-md text-base font-medium font-sans
+                            text-gray-700 hover:text-[#E42423] hover:bg-gray-50 transition-colors duration-150"
                 >
                   Sign Out
                 </button>
@@ -548,16 +545,16 @@ export function Header() {
               <div className="space-y-2">
                 <Link
                   to="/login"
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700
-                           hover:text-[#E42423] hover:bg-gray-50 transition-colors duration-150"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 font-sans
+                            hover:text-[#E42423] hover:bg-gray-50 transition-colors duration-150"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Sign In
                 </Link>
                 <Link
                   to="/signup"
-                  className="block px-3 py-2 rounded-md bg-[#E42423] text-white
-                           hover:bg-[#f45a59] transition-colors duration-150"
+                  className="block px-3 py-2 rounded-md bg-[#E42423] text-white font-sans
+                            hover:bg-[#f45a59] transition-colors duration-150"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Sign Up
@@ -570,8 +567,8 @@ export function Header() {
           <div className="pt-2 border-t border-gray-100">
             <Link
               to="/cart"
-              className="flex items-center justify-between px-3 py-2 rounded-md text-base font-medium
-                       text-gray-700 hover:text-[#E42423] hover:bg-gray-50 transition-colors duration-150"
+              className="flex items-center justify-between px-3 py-2 rounded-md text-base font-medium font-sans
+                        text-gray-700 hover:text-[#E42423] hover:bg-gray-50 transition-colors duration-150"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <span>Shopping Cart</span>
@@ -591,7 +588,7 @@ export function Header() {
       {/* Overlay for mobile menu */}
       {isMobileMenuOpen && (
         <div 
-          className="fixed inset-0 bg-black bg-opacity-25 z-40 lg:hidden"
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
           onClick={() => setIsMobileMenuOpen(false)}
           aria-hidden="true"
         />
